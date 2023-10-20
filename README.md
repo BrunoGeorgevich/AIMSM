@@ -24,7 +24,7 @@ python main.py
 
 ```bash
 source /opt/ros/melodic/setup.bash
-conda activate melody
+conda activate melodic
 roslaunch rosbridge_server rosbridge_websocket.launch
 ```
 
@@ -44,4 +44,13 @@ rviz -d /home/bruno/Documents/RViz\ Settings/robot_at_virtualhome.rviz
 ```bash
 source /opt/ros/melodic/setup.bash
 rosrun gmapping slam_gmapping scan:=/RobotAtVirtualHome/scan
+```
+
+---
+
+### Terminal 4: Run Gradio app
+
+```bash
+conda activate aimsm
+python app.py
 ```
