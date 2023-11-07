@@ -3,8 +3,11 @@
 ### Install packages
 
 ```bash
+pip install --upgrade pip
+
 git submodule update --recursive --remote
 pip install -r fastsam/requirements.txt
+pip install -r requirements.txt
 ```
 
 ### Download models

@@ -1,4 +1,4 @@
-from src.AIModules.AIModule import AIModule
+from src.AIModules.AIModule import AIModule, ModuleOutput
 
 from ultralytics import YOLO
 from random import randint
@@ -10,6 +10,7 @@ class YoloV8Module(AIModule):
     """This class is the implementation of the model Yolo V8 as an AIModule"""
 
     __model = None
+    __initialized = False
 
     def __init__(self) -> None:
         """
@@ -27,72 +28,115 @@ class YoloV8Module(AIModule):
         :type model_path: str (optional)
         """
         self.__model = YOLO(model_path)
+        self.__initialized = True
 
     def deinitiate(self) -> None:
         """
         The function deinitiate sets the value of the __model attribute to None.
         """
         self.__model = None
+        self.__initialized = False
 
-    def process(self, image: np.ndarray) -> list:
+    def process(self, input_data: dict) -> list:
         """
         The function processes an image using a pre-trained model and returns the predicted results.
 
-        :param image: The image parameter is an input image that you want to process. It should be a
-        numpy array representing the image
-        :type image: np.ndarray
+        :param input_data: Input data dictionary, which must contains the image to be processed.
+        {
+            "image": np.ndarray
+            ...
+        }
+        :type input_data: dict
         :return: a list of results.
         """
+        image = input_data.get("image", None)
+
+        if image is None:
+            raise ValueError("Image is not provided")
+
         if self.__model is None:
             raise ValueError("Model is not initiated")
 
         results = self.__model.predict(image, conf=0.6, iou=0.4)
         return results
 
-    def draw_results(self, image: np.ndarray, results: list) -> np.ndarray:
+    def draw_results(self, input_data: dict, results: list) -> np.ndarray:
         """
         The function takes an image and a list of results, and draws bounding boxes and labels on the
         image based on the results.
 
-        :param image: The `image` parameter is a NumPy array representing an image
-        :type image: np.ndarray
+        :param input_data: Input data dictionary, which must contains the image to be processed.
+        {
+            "image": np.ndarray
+            ...
+        }
         :param results: The `results` parameter is a list of objects that contain information about the
         detected objects in an image. Each object in the list has the following attributes:
         :type results: list
         :return: a processed image with bounding boxes and class labels drawn on it.
         """
+        image = input_data.get("image", None)
+
+        if image is None:
+            raise ValueError("Image is not provided")
+
         processed_image = image.copy()
 
-        for r in results:
-            boxes = r.boxes
-            for box in boxes:
-                x1, y1, x2, y2 = box.xyxy[0]
-                c = int(box.cls)
-                c_name = self.__model.names[c]
+        if results is None:
+            return None
 
-                if c not in self.__colors:
-                    self.__colors[c] = (
-                        randint(0, 255),
-                        randint(0, 255),
-                        randint(0, 255),
+        try:
+            for r in results:
+                boxes = r.boxes
+                for box in boxes:
+                    x1, y1, x2, y2 = box.xyxy[0]
+                    c = int(box.cls)
+                    c_name = self.__model.names[c]
+
+                    if c not in self.__colors:
+                        self.__colors[c] = (
+                            randint(0, 255),
+                            randint(0, 255),
+                            randint(0, 255),
+                        )
+
+                    cv2.rectangle(
+                        processed_image,
+                        (int(x1), int(y1)),
+                        (int(x2), int(y2)),
+                        self.__colors[c],
+                        2,
                     )
 
-                cv2.rectangle(
-                    processed_image,
-                    (int(x1), int(y1)),
-                    (int(x2), int(y2)),
-                    self.__colors[c],
-                    2,
-                )
-
-                cv2.putText(
-                    processed_image,
-                    c_name,
-                    (int(x1), int(y1)),
-                    cv2.FONT_HERSHEY_SIMPLEX,
-                    1,
-                    self.__colors[c],
-                    2,
-                )
+                    cv2.putText(
+                        processed_image,
+                        c_name,
+                        (int(x1), int(y1)),
+                        cv2.FONT_HERSHEY_SIMPLEX,
+                        1,
+                        self.__colors[c],
+                        2,
+                    )
+        except AttributeError:
+            return None
 
         return processed_image
+
+    def is_initialized(self) -> bool:
+        """
+        The function returns the value of the __initialized attribute.
+
+        :return: a boolean value indicating whether the model is initialized or not.
+        :rtype: bool
+        """
+        return self.__initialized
+
+    def get_output_type(self) -> str:
+        """
+        The function returns the type of the output of the module.
+
+        :return: a string indicating the type of the output of the module.
+        :rtype: str
+        """
+
+        return ModuleOutput.IMAGE.name

@@ -1,29 +1,32 @@
-from src.AIModules.AIModule import AIModule, ModuleOutput
+from transformers import pipeline
+from PIL import Image
 from typing import Any
 import numpy as np
-import sys
 
-sys.path.append("fastsam")
-from fastsam import FastSAM, FastSAMPrompt
+from src.AIModules.AIModule import AIModule, ModuleOutput
 
 
-class FastSamModule(AIModule):
-    """This class is the implementation of the model FastSAM as an AIModule"""
+class ImageCaptioningModule(AIModule):
+    """This class is the implementation of a model Image Captioning AI Module"""
 
-    __model = None  # The variable that will hold the FastSAM model
+    __model = None  # The variable that will hold the Image Captioning model
+    __feature_extractor = None  # The variable that will hold the feature extractor
+    __tokenizer = None  # The variable that will hold the tokenizer
     __initialized = (
         False  # The variable that will indicate whether the model is initialized
     )
     __device = "cuda:0"  # The model will be executed on this device
 
-    def initiate(self, model_path: str = "weights/FastSAM-x.pt") -> None:
+    def initiate(
+        self, model_path: str = "Salesforce/blip-image-captioning-large"
+    ) -> None:
         """
         Initializes the object by loading the FastSAM model from the specified path. If no path is provided, the default path is "weights/FastSAM-x.pt".
 
-        :param model_path: A string representing the path to the FastSAM model file.
+        :param model_path: A string representing the model card name to the Image Captioning model file.
         :type model_path: str
         :return: None"""
-        self.__model = FastSAM(model_path)
+        self.__model = pipeline("image-to-text", model_path)
         self.__initialized = True
 
     def deinitiate(self) -> None:
@@ -31,7 +34,7 @@ class FastSamModule(AIModule):
         self.__model = None
         self.__initialized = False
 
-    def process(self, input_data: dict) -> (FastSAMPrompt, Any):
+    def process(self, input_data: dict) -> list[str]:
         """
         The function processes an image using a model and returns a prompt process object and the
         annotations generated from the prompt process.
@@ -51,21 +54,12 @@ class FastSamModule(AIModule):
         if self.__initialized is False:
             raise ValueError("Model is not initiated")
 
-        everything_results = self.__model(
-            image,
-            device=self.__device,
-            retina_masks=True,
-            imgsz=1024,
-            conf=0.8,
-            iou=0.5,
-        )
-        prompt_process = FastSAMPrompt(image, everything_results, device=self.__device)
-        ann = prompt_process.everything_prompt()
-        return prompt_process, ann
+        image = Image.fromarray(image)
+        preds = self.__model(image)
+        preds = [pred["generated_text"].strip() for pred in preds]
+        return preds
 
-    def draw_results(
-        self, input_data: dict, results: (FastSAMPrompt, Any)
-    ) -> np.ndarray:
+    def draw_results(self, input_data: dict, results: Any) -> np.ndarray:
         """
         The function takes an image and a list of results, and returns the image with the prompt and
         annotation plotted on it, or the original image if there are no results.
@@ -79,21 +73,7 @@ class FastSamModule(AIModule):
         :type results: (FastSAMPrompt, Any)
         :return: an image with the segmented area drawn on it
         """
-        image = input_data.get("image", None)
-
-        if image is None:
-            raise ValueError("Image is not provided")
-
-        if results is None:
-            return None
-
-        prompt = results[0]
-        ann = results[1]
-
-        try:
-            return prompt.plot_to_result(ann, retina=True)
-        except IndexError:
-            return image
+        return results[0]
 
     def is_initialized(self) -> bool:
         """
@@ -112,4 +92,4 @@ class FastSamModule(AIModule):
         :rtype: str
         """
 
-        return ModuleOutput.IMAGE.name
+        return ModuleOutput.TEXT.name
