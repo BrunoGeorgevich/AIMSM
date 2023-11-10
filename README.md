@@ -3,8 +3,24 @@
 ### Install packages
 
 ```bash
-pip install --upgrade pip
+# ROS INSTALLATION
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+sudo apt install curl # if you haven't already installed curl
+curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -sudo apt updatesudo apt update
+sudo apt update
+sudo apt install ros-melodic-desktop-full
+echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
+source ~/.bashrc
 
+# ROS DEPENDENCIES
+sudo apt-get install ros-melodic-rosbridge-suite
+sudo apt-get install ros-melodic-slam-gmapping
+
+# ROS PYTHON PACKAGES
+pip install --upgrade pip
+pip install rospkg pyyaml
+
+# AIMSM DEPENDENCIES
 git submodule update --recursive --remote --init
 pip install -r fastsam/requirements.txt
 pip install -r requirements.txt
@@ -37,7 +53,7 @@ roslaunch rosbridge_server rosbridge_websocket.launch
 
 ```bash
 source /opt/ros/melodic/setup.bash
-rviz -d /home/bruno/Documents/RViz\ Settings/robot_at_virtualhome.rviz
+rviz -d rviz/robot_at_virtualhome.rviz
 ```
 
 ---
