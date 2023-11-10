@@ -5,7 +5,7 @@
 ```bash
 pip install --upgrade pip
 
-git submodule update --recursive --remote
+git submodule update --recursive --remote --init
 pip install -r fastsam/requirements.txt
 pip install -r requirements.txt
 ```
