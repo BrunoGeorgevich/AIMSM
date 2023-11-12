@@ -1,7 +1,9 @@
 from src.AIModules.AIModule import AIModule, ModuleOutput
 from typing import Any
 import numpy as np
+import torch
 import sys
+import gc
 
 sys.path.append("fastsam")
 from fastsam import FastSAM, FastSAMPrompt
@@ -10,11 +12,9 @@ from fastsam import FastSAM, FastSAMPrompt
 class FastSamModule(AIModule):
     """This class is the implementation of the model FastSAM as an AIModule"""
 
-    __model = None  # The variable that will hold the FastSAM model
-    __initialized = (
-        False  # The variable that will indicate whether the model is initialized
-    )
-    __device = "cuda:0"  # The model will be executed on this device
+    __model = None
+    __initialized = False
+    __device = "cuda:0"
 
     def initiate(self, model_path: str = "weights/FastSAM-x.pt") -> None:
         """
@@ -28,8 +28,11 @@ class FastSamModule(AIModule):
 
     def deinitiate(self) -> None:
         """Deinitializes the FastSAM model"""
+        del self.__model
         self.__model = None
         self.__initialized = False
+        gc.collect()
+        torch.cuda.empty_cache()
 
     def process(self, input_data: dict) -> (FastSAMPrompt, Any):
         """

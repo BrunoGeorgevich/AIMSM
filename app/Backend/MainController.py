@@ -1,13 +1,17 @@
+from time import perf_counter
 from src.AIModules.ImageCaptioningModule import ImageCaptioningModule
+from src.AIModules.RoomClassificationModule import RoomClassificationModule
 from src.AIModules.FastSamModule import FastSamModule
 from src.AIModules.YoloV8Module import YoloV8Module
 from app.Backend.Base import ImageProvider
 from src.Mechanism.AIMSM import AIMSM
 
+from PySide2.QtCore import QObject, Slot, Signal
 from sensor_msgs.msg import CompressedImage
-from PySide2.QtCore import QObject, Slot
 from PySide2.QtGui import QImage
 import numpy as np
+import pynvml
+import psutil
 import rospy
 import cv2
 
@@ -37,6 +41,8 @@ def toQImage(image: np.ndarray) -> QImage:
 
 
 class MainController(QObject):
+    fpsCounterUpdated = Signal()
+
     def __init__(self) -> None:
         super().__init__()
         self.image_provider = ImageProvider(self.__image_provider_handler)
@@ -45,6 +51,7 @@ class MainController(QObject):
             "image": np.ones((480, 640, 3), dtype=np.uint8),
         }
         self.__output_data = {}
+        self.fps_counter = "-"
 
         rospy.init_node("MainControllerNode")
         rospy.Subscriber(
@@ -59,9 +66,10 @@ class MainController(QObject):
         )
 
         self.__aimsm = AIMSM()
-        self.__aimsm.add_model("YoloV8", YoloV8Module())
-        self.__aimsm.add_model("FastSAM", FastSamModule())
-        self.__aimsm.add_model("ImageCaptioning", ImageCaptioningModule())
+        self.__aimsm.add_model("Yolo V8", YoloV8Module())
+        self.__aimsm.add_model("Fast SAM", FastSamModule())
+        self.__aimsm.add_model("Image Captioning", ImageCaptioningModule())
+        self.__aimsm.add_model("Room Classification", RoomClassificationModule())
 
     @Slot(str)
     def toggle_ai_model(self, ai_model_name: str):
@@ -73,8 +81,36 @@ class MainController(QObject):
 
     @Slot()
     def process_models(self):
+        i_t = perf_counter()
         results = self.__aimsm.process(self.__input_data)
+        e_t = perf_counter()
+        elapsed = e_t - i_t
+        self.fps_counter = 1 / elapsed if elapsed != 0 else 999
+        self.fpsCounterUpdated.emit()
         self.__output_data = self.__aimsm.draw_results(self.__input_data, results)
+
+    @Slot(result=str)
+    def get_fps_count(self):
+        cpu_usage = psutil.cpu_percent()
+        ram_usage = psutil.virtual_memory().percent
+        fps_str = self.fps_counter
+
+        pynvml.nvmlInit()
+        handle = pynvml.nvmlDeviceGetHandleByIndex(0)
+        gpu_usage = pynvml.nvmlDeviceGetUtilizationRates(handle).gpu
+        vram_usage = (
+            pynvml.nvmlDeviceGetMemoryInfo(handle).used
+            / pynvml.nvmlDeviceGetMemoryInfo(handle).total
+        )
+        pynvml.nvmlShutdown()
+
+        if isinstance(self.fps_counter, float):
+            if self.fps_counter > 999:
+                fps_str = "999+"
+            else:
+                fps_str = f"{self.fps_counter:.2f}"
+
+        return f"FPS: {fps_str} | CPU: {cpu_usage:.2f}% | RAM: {ram_usage:.2f}% | GPU: {gpu_usage}% | VRAM: {vram_usage*100:.2f}%"
 
     @Slot(result=list)
     def get_model_names(self):
@@ -98,17 +134,19 @@ class MainController(QObject):
             return toQImage(self.__input_data["image"])
         elif method == "depth":
             return toQImage(self.__input_data["depth"])
-        elif method == "YoloV8":
-            if self.__aimsm.is_model_initialized("YoloV8"):
-                return toQImage(self.__output_data["YoloV8"])
+        elif method == "Yolo V8":
+            if self.__aimsm.is_model_initialized("Yolo V8"):
+                return toQImage(self.__output_data["Yolo V8"])
             else:
                 return toQImage(np.zeros((480, 640, 3), dtype=np.uint8))
-        elif method == "FastSAM":
-            if self.__aimsm.is_model_initialized("FastSAM"):
-                return toQImage(self.__output_data["FastSAM"])
+        elif method == "Fast SAM":
+            if self.__aimsm.is_model_initialized("Fast SAM"):
+                return toQImage(self.__output_data["Fast SAM"])
             else:
                 return toQImage(np.zeros((480, 640, 3), dtype=np.uint8))
-        elif method == "ImageCaptioning":
+        elif method == "Image Captioning":
+            return toQImage(np.zeros((480, 640, 3), dtype=np.uint8))
+        elif method == "Room Classification":
             return toQImage(np.zeros((480, 640, 3), dtype=np.uint8))
         else:
             raise ValueError("Invalid path")

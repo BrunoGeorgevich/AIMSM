@@ -8,10 +8,10 @@ import gc
 from src.AIModules.AIModule import AIModule, ModuleOutput
 
 
-class ImageCaptioningModule(AIModule):
-    """This class is the implementation of a model Image Captioning AI Module"""
+class RoomClassificationModule(AIModule):
+    """This class is the implementation of a model Room Classification AI Module"""
 
-    __model = None  # The variable that will hold the Image Captioning model
+    __model = None  # The variable that will hold the Room Classification model
     __feature_extractor = None  # The variable that will hold the feature extractor
     __tokenizer = None  # The variable that will hold the tokenizer
     __initialized = (
@@ -19,16 +19,16 @@ class ImageCaptioningModule(AIModule):
     )
     __device = "cuda:0"  # The model will be executed on this device
 
-    def initiate(
-        self, model_path: str = "Salesforce/blip-image-captioning-large"
-    ) -> None:
+    def initiate(self, model_path: str = "HHousen/household-rooms") -> None:
         """
         Initializes the object by loading the FastSAM model from the specified path. If no path is provided, the default path is "weights/FastSAM-x.pt".
 
-        :param model_path: A string representing the model card name to the Image Captioning model file.
+        :param model_path: A string representing the model card name to the Room Classification model file.
         :type model_path: str
         :return: None"""
-        self.__model = pipeline("image-to-text", model_path, device=self.__device)
+        self.__model = pipeline(
+            "image-classification", model_path, device=self.__device
+        )
         self.__initialized = True
 
     def deinitiate(self) -> None:
@@ -61,8 +61,8 @@ class ImageCaptioningModule(AIModule):
 
         image = Image.fromarray(image)
         preds = self.__model(image)
-        preds = [pred["generated_text"].strip() for pred in preds]
-        return preds
+        best = preds[0]
+        return best
 
     def draw_results(self, input_data: dict, results: Any) -> np.ndarray:
         """
@@ -78,7 +78,7 @@ class ImageCaptioningModule(AIModule):
         :type results: (FastSAMPrompt, Any)
         :return: an image with the segmented area drawn on it
         """
-        return results[0]
+        return f"Room: {results['label']}\nConfidence: {results['score']*100:.2f}%"
 
     def is_initialized(self) -> bool:
         """

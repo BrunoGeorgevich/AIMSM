@@ -21,12 +21,34 @@ ApplicationWindow {
     width: 1280
     height: 900
 
+    Label {
+        id: fpsLabel
+        anchors {
+            bottom: parent.bottom
+            horizontalCenter: parent.horizontalCenter
+            margins: 10
+        }
+
+        font {
+            family: "Arial"
+            pixelSize: 18
+        }
+
+        Connections {
+            target: main_controller
+
+            function onFpsCounterUpdated() {
+                fpsLabel.text = `${main_controller.get_fps_count()}`                
+            }
+        }
+    }
+
 
     Column {
         Item {
             id: camerasItem
             width: root_window.width
-            height: root_window.height * 0.45
+            height: root_window.height * 0.45 - 30
 
             Row {
                 anchors {
@@ -70,8 +92,9 @@ ApplicationWindow {
                 Repeater {
                     model: main_controller.get_model_names()
                     delegate: Item {
-                        height: 80
-                        width: 120
+                        id: aiModelStatusItem
+                        width: (processedFeedsItem.width - (10 * (processedFeedRepeater.model.length - 1)) - 20) * (1 / processedFeedRepeater.model.length)
+                        height: processedFeedsItem.height - 20
                         Column {
                             anchors.centerIn: parent
                             spacing: 15
@@ -98,6 +121,7 @@ ApplicationWindow {
                             }
                             Button {
                                 text: modelData
+                                width: aiModelStatusItem.width * 0.75
                                 anchors.horizontalCenter: parent.horizontalCenter
                                 onClicked: {
                                     main_controller.toggle_ai_model(modelData)

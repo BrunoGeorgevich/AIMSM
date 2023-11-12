@@ -3,7 +3,9 @@ from src.AIModules.AIModule import AIModule, ModuleOutput
 from ultralytics import YOLO
 from random import randint
 import numpy as np
+import torch
 import cv2
+import gc
 
 
 class YoloV8Module(AIModule):
@@ -18,7 +20,7 @@ class YoloV8Module(AIModule):
         """
         self.__colors = {}
 
-    def initiate(self, model_path: str = "yolov8n.pt") -> None:
+    def initiate(self, model_path: str = "YoloV8.pt") -> None:
         """
         The `initiate` function initializes a YOLO object with a specified model path.
 
@@ -34,8 +36,11 @@ class YoloV8Module(AIModule):
         """
         The function deinitiate sets the value of the __model attribute to None.
         """
+        del self.__model
         self.__model = None
         self.__initialized = False
+        gc.collect()
+        torch.cuda.empty_cache()
 
     def process(self, input_data: dict) -> list:
         """
@@ -57,7 +62,7 @@ class YoloV8Module(AIModule):
         if self.__model is None:
             raise ValueError("Model is not initiated")
 
-        results = self.__model.predict(image, conf=0.6, iou=0.4)
+        results = self.__model.predict(image, conf=0.2, iou=0.4)
         return results
 
     def draw_results(self, input_data: dict, results: list) -> np.ndarray:

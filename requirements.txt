@@ -3,3 +3,4 @@ opencv-python-headless
 transformers
 PySide2
 rospkg
+pynvml
