@@ -59,6 +59,7 @@ class RoomClassificationModule(AIModule):
         if self.__initialized is False:
             raise ValueError("Model is not initiated")
 
+        # image = image[:, :, ::-1]
         image = Image.fromarray(image)
         preds = self.__model(image)
         best = preds[0]

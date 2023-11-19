@@ -62,7 +62,7 @@ class YoloV8Module(AIModule):
         if self.__model is None:
             raise ValueError("Model is not initiated")
 
-        results = self.__model.predict(image, conf=0.2, iou=0.4)
+        results = self.__model.predict(image, conf=0.4, iou=0.4)
         return results
 
     def draw_results(self, input_data: dict, results: list) -> np.ndarray:

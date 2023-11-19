@@ -59,8 +59,9 @@ class ImageCaptioningModule(AIModule):
         if self.__initialized is False:
             raise ValueError("Model is not initiated")
 
+        image = image[:, :, ::-1]
         image = Image.fromarray(image)
-        preds = self.__model(image)
+        preds = self.__model(image, max_new_tokens=20)
         preds = [pred["generated_text"].strip() for pred in preds]
         return preds
 

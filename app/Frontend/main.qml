@@ -45,36 +45,100 @@ ApplicationWindow {
 
 
     Column {
-        Item {
-            id: camerasItem
+        Row {
             width: root_window.width
             height: root_window.height * 0.45 - 30
+            Item {
+                id: camerasItem
+                width: root_window.width * 0.8
+                height: root_window.height * 0.45 - 30
 
-            Row {
-                anchors {
-                    fill: parent
-                    margins: 10
-                }
-                spacing: 10
-                Repeater {
-                    id: feedRepeater
-                    model: ["image", "depth"]
-                    delegate: Rectangle {
-                        width: camerasItem.width / 2 - 15
-                        height: camerasItem.height
-                        color: "black"
+                Row {
+                    anchors {
+                        fill: parent
+                        margins: 10
+                    }
+                    spacing: 10
+                    Repeater {
+                        id: feedRepeater
+                        model: ["image", "depth"]
+                        delegate: Rectangle {
+                            width: camerasItem.width / 2 - 15
+                            height: camerasItem.height
+                            color: "black"
 
-                        Image {
-                            id: feed
-                            anchors {
-                                fill: parent
-                                margins: 2
+                            Image {
+                                id: feed
+                                anchors {
+                                    fill: parent
+                                    margins: 2
+                                }
+                                source: `image://provider/none/`
                             }
-                            source: `image://provider/none/`
-                        }
 
-                        Component.onCompleted: {
-                            root_window.imageFeeds.push(feed)
+                            Component.onCompleted: {
+                                root_window.imageFeeds.push(feed)
+                            }
+                        }
+                    }
+                }
+            }        
+
+            Item {
+                width: root_window.width * 0.2
+                height: root_window.height * 0.45 - 30
+
+                Label {
+                    id: statesTitleLabel
+                    anchors {
+                        top: parent.top
+                        topMargin: 10
+                        horizontalCenter: parent.horizontalCenter
+                    }
+
+                    text: "States"
+                    font {
+                        bold: true
+                        pixelSize: 18
+                    }
+                }
+
+                Label {
+                    id: statesCurrentStateLabel
+                    anchors {
+                        top: statesTitleLabel.bottom
+                        topMargin: 4
+                        horizontalCenter: parent.horizontalCenter
+                    }
+
+                    text: main_controller.get_current_state()
+                    font {
+                        pixelSize: 12
+                    }
+
+                    Connections {
+                        target: main_controller
+
+                        function onStateSwitched() {
+                            statesCurrentStateLabel.text = main_controller.get_current_state()
+
+                        }
+                    }
+                }
+
+                Column {
+                    spacing: 10
+                    anchors.centerIn: parent
+
+                    Repeater {
+                        model: main_controller.get_state_names()
+                        delegate: Button {
+                            text: modelData
+                            width: 180
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            onClicked: {
+                                main_controller.switch_state(modelData)
+                            }
                         }
                     }
                 }
@@ -223,6 +287,7 @@ ApplicationWindow {
             }
         }
     }
+    
     Timer {
         interval: 100
         repeat: true
@@ -240,6 +305,21 @@ ApplicationWindow {
                         root_window.processedFeeds[i].source = `image://provider/${processedFeedRepeater.model[i]}/${Math.floor(Math.random() * 100)}`
                     }
                 }
+            }
+        }
+    }
+    
+    Timer {
+        interval: 16
+        repeat: true
+        running: true
+        onTriggered: {
+            main_controller.log_data()
+            let models = main_controller.get_model_names()
+
+            for (let i = 0; i < models.length; i++) {
+                let model = models[i]
+                aiModelToggled(model)
             }
         }
     }
