@@ -310,7 +310,7 @@ ApplicationWindow {
     }
     
     Timer {
-        interval: 16
+        interval: 50
         repeat: true
         running: true
         onTriggered: {

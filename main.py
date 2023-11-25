@@ -4,14 +4,24 @@ from PySide2.QtCore import QResource
 from PySide2.QtQml import QQmlApplicationEngine
 from PySide2.QtWidgets import QApplication
 
+import ctypes.util
+import ctypes
 import signal
 import sys
 import os
+
 
 signal.signal(signal.SIGINT, signal.SIG_DFL)
 
 
 if __name__ == "__main__":
+    libc = ctypes.CDLL(ctypes.util.find_library("c"))
+    libc.malloc_trim(ctypes.c_int(0))
+
+    os.environ["KMP_AFFINITY"] = "granularity=fine,compact,1,0"
+    os.environ["OMP_NUM_THREADS"] = "1"
+    os.environ["OMP_SCHEDULE"] = "STATIC"
+    os.environ["CUDA_MODULE_LOADING"] = "LAZY"
     os.environ["QT_QUICK_CONTROLS_STYLE"] = "Material"
 
     app = QApplication(sys.argv)
