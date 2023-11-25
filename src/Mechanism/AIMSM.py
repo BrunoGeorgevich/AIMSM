@@ -33,16 +33,17 @@ class AIMSM:
             if name not in self.__models:
                 raise ValueError("Model not found")
             if self.__models[name].is_initialized():
-                self.__models[name].deinitiate()
+                self.deinitiate_model(name)
             else:
-                self.__models[name].initiate()
+                self.initiate_model(name)
 
         if isinstance(name, str):
             toggle_model_thread(name)
         elif isinstance(name, list):
             for n in name:
-                t = Thread(target=toggle_model_thread, args=(n,))
-                t.start()
+                toggle_model_thread(n)
+                # t = Thread(target=toggle_model_thread, args=(n,))
+                # t.start()
 
     def disable_model(self, name: str | list):
         def disable_model_thread(name):
@@ -55,8 +56,9 @@ class AIMSM:
             disable_model_thread(name)
         elif isinstance(name, list):
             for n in name:
-                t = Thread(target=disable_model_thread, args=(n,))
-                t.start()
+                disable_model_thread(n)
+                # t = Thread(target=disable_model_thread, args=(n,))
+                # t.start()
 
     def enable_model(self, name: str | list):
         def enable_model_thread(name):
@@ -70,19 +72,17 @@ class AIMSM:
             enable_model_thread(name)
         elif isinstance(name, list):
             for n in name:
-                t = Thread(target=enable_model_thread, args=(n,))
-                t.start()
+                enable_model_thread(n)
+                # t = Thread(target=enable_model_thread, args=(n,))
+                # t.start()
 
     def set_state_models(self, state_models: list):
         models = self.get_model_names()
         diff = [model for model in models if model not in state_models]
 
-        if state_models == []:
-            self.disable_model(models)
-            return
-
         self.disable_model(diff)
-        self.enable_model(state_models)
+        if state_models != []:
+            self.enable_model(state_models)
 
     def get_model_names(self):
         return list(self.__models.keys())
@@ -97,18 +97,19 @@ class AIMSM:
             if model.is_initialized():
                 results[name] = model.process(input_data)
             else:
-                results[name] = np.zeros((480, 640, 3), dtype=np.uint8)
+                results[name] = None
 
         results = {}
 
-        threads = []
+        # threads = []
         for name, model in self.__models.items():
-            t = Thread(target=process_thread, args=(results, name, model, input_data))
-            t.start()
-            threads.append(t)
+            process_thread(results, name, model, input_data)
+        #     t = Thread(target=process_thread, args=(results, name, model, input_data))
+        #     t.start()
+        #     threads.append(t)
 
-        for t in threads:
-            t.join()
+        # for t in threads:
+        #     t.join()
 
         return results
 
@@ -121,16 +122,17 @@ class AIMSM:
                 results[name] = model.draw_results(input_data, processed_result)
 
         results = {}
-        threads = []
+        # threads = []
         for name, model in self.__models.items():
-            t = Thread(
-                target=draw_results_thread,
-                args=(results, name, model, input_data, processed_results),
-            )
-            threads.append(t)
-            t.start()
+            draw_results_thread(results, name, model, input_data, processed_results)
+        #     t = Thread(
+        #         target=draw_results_thread,
+        #         args=(results, name, model, input_data, processed_results),
+        #     )
+        #     threads.append(t)
+        #     t.start()
 
-        for t in threads:
-            t.join()
+        # for t in threads:
+        #     t.join()
 
         return results

@@ -30,8 +30,7 @@ class CSSM:
             bind_model(name, model_name)
         elif isinstance(model_name, list):
             for n in model_name:
-                t = Thread(target=bind_model, args=(name, n))
-                t.start()
+                bind_model(name, n)
 
     def release(self, name: str, model_name: str):
         if name not in self.__states:
