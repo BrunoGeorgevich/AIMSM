@@ -10,16 +10,16 @@ from src.Mechanism.CSSM import CSSM
 
 from PySide2.QtCore import QObject, Slot, Signal
 from sensor_msgs.msg import CompressedImage
-from memory_profiler import profile
 from dataclasses import dataclass
 from PySide2.QtGui import QImage
 from collections import deque
 from time import perf_counter
 import numpy as np
-import pynvml
 import psutil
 import rospy
+import torch
 import cv2
+import os
 
 
 @dataclass()
@@ -219,14 +219,11 @@ class MainController(QObject):
     @Slot()
     def log_data(self):
         rs = self.__resources_state
-        rs.cpu_usage = psutil.cpu_percent()
-        rs.ram_usage = psutil.virtual_memory().used / 1024**3
 
-        pynvml.nvmlInit()
-        handle = pynvml.nvmlDeviceGetHandleByIndex(0)
-        rs.gpu_usage = pynvml.nvmlDeviceGetUtilizationRates(handle).gpu
-        rs.vram_usage = pynvml.nvmlDeviceGetMemoryInfo(handle).used / 1024**3
-        pynvml.nvmlShutdown()
+        rs.cpu_usage = psutil.cpu_percent()
+        rs.ram_usage = psutil.Process(os.getpid()).memory_info().rss / 1024**3
+        rs.gpu_usage = torch.cuda.utilization()
+        rs.vram_usage = torch.cuda.memory_allocated() / 1024**3
 
         self.__resource_monitor.add_state(rs)
         self.__resources_state = self.__resource_monitor.get_avg_state()
