@@ -33,9 +33,9 @@ class AIMSM:
             if name not in self.__models:
                 raise ValueError("Model not found")
             if self.__models[name].is_initialized():
-                self.deinitiate_model(name)
+                self.disable_model(name)
             else:
-                self.initiate_model(name)
+                self.enable_model(name)
 
         if isinstance(name, str):
             toggle_model_thread(name)
@@ -50,6 +50,7 @@ class AIMSM:
             if name not in self.__models:
                 raise ValueError("Model not found")
             if self.__models[name].is_initialized():
+                print("Deinitializing", name)
                 self.__models[name].deinitiate()
 
         if isinstance(name, str):
