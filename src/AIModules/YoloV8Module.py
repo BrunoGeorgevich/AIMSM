@@ -1,12 +1,15 @@
 from src.AIModules.AIModule import AIModule, ModuleOutput
 
-from memory_profiler import profile
-from ultralytics import YOLO
 from random import randint
 import numpy as np
 import torch
 import cv2
 import gc
+import os
+
+os.environ["YOLO_VERBOSE"] = "false"
+
+from ultralytics import YOLO
 
 
 class YoloV8Module(AIModule):

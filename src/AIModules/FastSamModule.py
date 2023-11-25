@@ -4,6 +4,9 @@ import numpy as np
 import torch
 import sys
 import gc
+import os
+
+os.environ["YOLO_VERBOSE"] = "false"
 
 sys.path.append("fastsam")
 from fastsam import FastSAM, FastSAMPrompt
