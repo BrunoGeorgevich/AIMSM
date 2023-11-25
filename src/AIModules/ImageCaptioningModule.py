@@ -19,6 +19,7 @@ class ImageCaptioningModule(AIModule):
     )
     __device = "cuda:0"  # The model will be executed on this device
 
+    @torch.no_grad()
     def initiate(
         self, model_path: str = "Salesforce/blip-image-captioning-large"
     ) -> None:
@@ -31,14 +32,23 @@ class ImageCaptioningModule(AIModule):
         self.__model = pipeline("image-to-text", model_path, device=self.__device)
         self.__initialized = True
 
+    @torch.no_grad()
     def deinitiate(self) -> None:
         """Deinitializes the FastSAM model"""
         del self.__model
         self.__model = None
         self.__initialized = False
+
+        try:
+            torch._C._cuda_clearCublasWorkspaces()
+            torch._dynamo.reset()
+        except AttributeError:
+            pass
+
         gc.collect()
         torch.cuda.empty_cache()
 
+    @torch.no_grad()
     def process(self, input_data: dict) -> list[str]:
         """
         The function processes an image using a model and returns a prompt process object and the
@@ -63,8 +73,14 @@ class ImageCaptioningModule(AIModule):
         image = Image.fromarray(image)
         preds = self.__model(image, max_new_tokens=20)
         preds = [pred["generated_text"].strip() for pred in preds]
+
+        del image
+        gc.collect()
+        torch.cuda.empty_cache()
+
         return preds
 
+    @torch.no_grad()
     def draw_results(self, input_data: dict, results: Any) -> np.ndarray:
         """
         The function takes an image and a list of results, and returns the image with the prompt and
@@ -79,7 +95,13 @@ class ImageCaptioningModule(AIModule):
         :type results: (FastSAMPrompt, Any)
         :return: an image with the segmented area drawn on it
         """
-        return results[0]
+        res = results[0]
+
+        del results
+        gc.collect()
+        torch.cuda.empty_cache()
+
+        return res
 
     def is_initialized(self) -> bool:
         """

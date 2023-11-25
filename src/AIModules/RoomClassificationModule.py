@@ -12,13 +12,12 @@ class RoomClassificationModule(AIModule):
     """This class is the implementation of a model Room Classification AI Module"""
 
     __model = None  # The variable that will hold the Room Classification model
-    __feature_extractor = None  # The variable that will hold the feature extractor
-    __tokenizer = None  # The variable that will hold the tokenizer
     __initialized = (
         False  # The variable that will indicate whether the model is initialized
     )
     __device = "cuda:0"  # The model will be executed on this device
 
+    @torch.no_grad()
     def initiate(self, model_path: str = "HHousen/household-rooms") -> None:
         """
         Initializes the object by loading the FastSAM model from the specified path. If no path is provided, the default path is "weights/FastSAM-x.pt".
@@ -31,14 +30,23 @@ class RoomClassificationModule(AIModule):
         )
         self.__initialized = True
 
+    @torch.no_grad()
     def deinitiate(self) -> None:
         """Deinitializes the FastSAM model"""
         del self.__model
         self.__model = None
         self.__initialized = False
+
+        try:
+            torch._C._cuda_clearCublasWorkspaces()
+            torch._dynamo.reset()
+        except AttributeError:
+            pass
+
         gc.collect()
         torch.cuda.empty_cache()
 
+    @torch.no_grad()
     def process(self, input_data: dict) -> list[str]:
         """
         The function processes an image using a model and returns a prompt process object and the
@@ -51,20 +59,27 @@ class RoomClassificationModule(AIModule):
         }
         :return: a tuple containing two values: `prompt_process` and `ann`.
         """
-        image = input_data.get("image", None)
+        with torch.no_grad():
+            image = input_data.get("image", None)
 
-        if image is None:
-            raise ValueError("Image is not provided")
+            if image is None:
+                raise ValueError("Image is not provided")
 
-        if self.__initialized is False:
-            raise ValueError("Model is not initiated")
+            if self.__initialized is False:
+                raise ValueError("Model is not initiated")
 
-        # image = image[:, :, ::-1]
-        image = Image.fromarray(image)
-        preds = self.__model(image)
-        best = preds[0]
-        return best
+            image = Image.fromarray(image)
+            preds = self.__model(image)
+            best = preds[0]
 
+            del preds
+            del image
+            gc.collect()
+            torch.cuda.empty_cache()
+
+            return best
+
+    @torch.no_grad()
     def draw_results(self, input_data: dict, results: Any) -> np.ndarray:
         """
         The function takes an image and a list of results, and returns the image with the prompt and
@@ -79,7 +94,14 @@ class RoomClassificationModule(AIModule):
         :type results: (FastSAMPrompt, Any)
         :return: an image with the segmented area drawn on it
         """
-        return f"Room: {results['label']}\nConfidence: {results['score']*100:.2f}%"
+        output = f"Room: {results['label']}\nConfidence: {results['score']*100:.2f}%"
+
+        del results
+        del input_data
+        gc.collect()
+        torch.cuda.empty_cache()
+
+        return output
 
     def is_initialized(self) -> bool:
         """

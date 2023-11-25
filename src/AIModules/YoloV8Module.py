@@ -1,5 +1,6 @@
 from src.AIModules.AIModule import AIModule, ModuleOutput
 
+from memory_profiler import profile
 from ultralytics import YOLO
 from random import randint
 import numpy as np
@@ -20,6 +21,7 @@ class YoloV8Module(AIModule):
         """
         self.__colors = {}
 
+    @torch.no_grad()
     def initiate(self, model_path: str = "YoloV8.pt") -> None:
         """
         The `initiate` function initializes a YOLO object with a specified model path.
@@ -32,6 +34,7 @@ class YoloV8Module(AIModule):
         self.__model = YOLO(model_path)
         self.__initialized = True
 
+    @torch.no_grad()
     def deinitiate(self) -> None:
         """
         The function deinitiate sets the value of the __model attribute to None.
@@ -39,9 +42,17 @@ class YoloV8Module(AIModule):
         del self.__model
         self.__model = None
         self.__initialized = False
+
+        try:
+            torch._C._cuda_clearCublasWorkspaces()
+            torch._dynamo.reset()
+        except AttributeError:
+            pass
+
         gc.collect()
         torch.cuda.empty_cache()
 
+    @torch.no_grad()
     def process(self, input_data: dict) -> list:
         """
         The function processes an image using a pre-trained model and returns the predicted results.
@@ -54,17 +65,24 @@ class YoloV8Module(AIModule):
         :type input_data: dict
         :return: a list of results.
         """
-        image = input_data.get("image", None)
+        with torch.no_grad():
+            image = input_data.get("image", None)
 
-        if image is None:
-            raise ValueError("Image is not provided")
+            if image is None:
+                raise ValueError("Image is not provided")
 
-        if self.__model is None:
-            raise ValueError("Model is not initiated")
+            if self.__model is None:
+                raise ValueError("Model is not initiated")
 
-        results = self.__model.predict(image, conf=0.4, iou=0.4)
-        return results
+            results = self.__model.predict(image, conf=0.4, iou=0.4)
 
+            del image
+            gc.collect()
+            torch.cuda.empty_cache()
+
+            return results
+
+    @torch.no_grad()
     def draw_results(self, input_data: dict, results: list) -> np.ndarray:
         """
         The function takes an image and a list of results, and draws bounding boxes and labels on the
@@ -124,6 +142,11 @@ class YoloV8Module(AIModule):
                     )
         except AttributeError:
             return None
+
+        del results
+        del input_data
+        gc.collect()
+        torch.cuda.empty_cache()
 
         return processed_image
 
