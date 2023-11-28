@@ -28,6 +28,9 @@ class AIMSM:
             raise ValueError("Model not found")
         return self.__models[name].is_initialized()
 
+    def initialized_models(self):
+        return [name for name, model in self.__models.items() if model.is_initialized()]
+
     def toggle_model(self, name: str | list):
         def toggle_model_thread(name):
             if name not in self.__models:
@@ -50,7 +53,7 @@ class AIMSM:
             if name not in self.__models:
                 raise ValueError("Model not found")
             if self.__models[name].is_initialized():
-                print("Deinitializing", name)
+                # print("Deinitializing", name)
                 self.__models[name].deinitiate()
 
         if isinstance(name, str):
@@ -66,7 +69,7 @@ class AIMSM:
             if name not in self.__models:
                 raise ValueError("Model not found")
             if not self.__models[name].is_initialized():
-                print("Initializing", name)
+                # print("Initializing", name)
                 self.__models[name].initiate()
 
         if isinstance(name, str):
