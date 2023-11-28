@@ -4,19 +4,20 @@ import os
 
 
 class CSVDatabaseStrategy(DatabaseStrategy):
-    def __init__(self) -> None:
+    def __init__(self, database_path="database.csv") -> None:
         super().__init__()
 
         self.__database = None
+        self.__database_path = database_path
 
     def open(self):
         if self.__database is not None:
             raise ValueError("Database is already open")
 
-        if os.path.exists("database.csv"):
-            self.__database = open("database.csv", "a")
+        if os.path.exists(self.__database_path):
+            self.__database = open(self.__database_path, "a")
         else:
-            self.__database = open("database.csv", "w")
+            self.__database = open(self.__database_path, "w")
             self.__database.write("FPS;CPU;RAM;GPU;VRAM;Running Models\n")
 
     def close(self):

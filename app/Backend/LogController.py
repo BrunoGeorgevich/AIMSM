@@ -3,7 +3,7 @@ from app.Backend.DatabaseStrategy.DatabaseStrategy import DatabaseStrategy
 
 class LogController:
     def __init__(self, database_strategy: DatabaseStrategy) -> None:
-        self.__database = database_strategy()
+        self.__database = database_strategy
 
     def open_database(self):
         self.__database.open()

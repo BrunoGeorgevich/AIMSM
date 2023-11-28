@@ -38,7 +38,7 @@ class ResourcesState:
 
 
 class ResourceMonitor:
-    def __init__(self, max_size=4):
+    def __init__(self, max_size=1):
         self.__state_queue = deque(maxlen=max_size)
 
     def add_state(self, state: ResourcesState):
@@ -97,7 +97,7 @@ class MainController(QObject):
     fpsCounterUpdated = Signal()
     stateSwitched = Signal()
 
-    def __init__(self) -> None:
+    def __init__(self, database_path="database.csv") -> None:
         super().__init__()
 
         self.image_provider = ImageProvider(self.__image_provider_handler)
@@ -105,6 +105,7 @@ class MainController(QObject):
             "depth": np.zeros((480, 640), dtype=np.uint8),
             "image": np.ones((480, 640, 3), dtype=np.uint8),
         }
+        self.__results_data = {}
         self.__output_data = {}
         self.fps_counter = "-"
 
@@ -145,7 +146,7 @@ class MainController(QObject):
 
         self.__cssm.switch("Idle")
 
-        self.__log_controller = LogController(CSVDatabaseStrategy)
+        self.__log_controller = LogController(CSVDatabaseStrategy(database_path))
         self.__log_controller.open_database()
 
     def __del__(self):
@@ -176,11 +177,19 @@ class MainController(QObject):
         # dictionary, which contains the output of each AI model after processing the input data. The
         # names of the models that have produced output are added to the `running_models` list.
 
-        running_models = [k for k, v in results.items() if v is not None]
+        self.__results_data = results
+
+        self.register_log()
+        self.__output_data = self.__aimsm.draw_results(self.__input_data, results)
+
+    def set_input_data(self, input_data):
+        self.__input_data = input_data
+
+    def register_log(self):
+        running_models = self.__aimsm.initialized_models()
         self.__log_controller.write_to_database(
             {"rs": self.__resources_state, "models": running_models}
         )
-        self.__output_data = self.__aimsm.draw_results(self.__input_data, results)
 
     @Slot(result=str)
     def get_fps_count(self):
@@ -197,6 +206,10 @@ class MainController(QObject):
         return self.__cssm.get_states()
 
     @Slot(str)
+    def set_state_models(self, state_models):
+        self.__aimsm.set_state_models(state_models)
+
+    @Slot(str)
     def switch_state(self, state_name):
         self.__cssm.switch(state_name)
         self.__aimsm.set_state_models(self.__cssm.state_models())
@@ -211,6 +224,12 @@ class MainController(QObject):
         if name not in self.__output_data:
             raise ValueError("Model not found")
         return self.__output_data[name]
+
+    @Slot(str, result=str)
+    def get_model_result(self, name) -> str:
+        if name not in self.__results_data:
+            raise ValueError("Model not found")
+        return self.__results_data[name]
 
     @Slot(str, result=str)
     def get_model_output_type(self, name):
@@ -234,7 +253,6 @@ class MainController(QObject):
         #     else:
         #         fps_str = f"{self.fps_counter:.2f}"
         # self.__log_controller.log_data()
-        pass
 
     def __image_provider_handler(self, path: str, size: int, requestedSize: int):
         method = path.split("/")[0]
