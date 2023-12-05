@@ -46,11 +46,14 @@ for _ in tqdm(range(rounds)):
     deinitiate_time = (e_t - i_t) / (10**9)
     times["deinitiate"].append(deinitiate_time)
 
-initiate_time = np.mean(times["initiate"])
-deinitiate_time = np.mean(times["deinitiate"])
+initiate_time_mean = np.mean(times["initiate"])
+deinitiate_time_mean = np.mean(times["deinitiate"])
+
+initiate_time_std = np.std(times["initiate"])
+deinitiate_time_std = np.std(times["deinitiate"])
 
 print("-" * 50)
 print("Random model switching experiment")
-print(f"Mean initiate time: {initiate_time:.3f} s")
-print(f"Mean deinitiate time: {deinitiate_time:.3f} s")
+print(f"Mean initiate time: {initiate_time_mean:.3f} ({initiate_time_std:.3f}) s")
+print(f"Mean deinitiate time: {deinitiate_time_mean:.3f} ({deinitiate_time_std:.3f}) s")
 print("-" * 50)

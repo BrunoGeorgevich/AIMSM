@@ -1,0 +1,17 @@
+--------------------------------------------------
+Model: Yolo V8
+Mean initiate time: 0.038 s
+Mean deinitiate time: 0.056 s
+--------------------------------------------------
+Model: Fast SAM
+Mean initiate time: 0.062 s
+Mean deinitiate time: 0.061 s
+--------------------------------------------------
+Model: Image Captioning
+Mean initiate time: 2.054 s
+Mean deinitiate time: 0.080 s
+--------------------------------------------------
+Model: Room Classification
+Mean initiate time: 0.605 s
+Mean deinitiate time: 0.061 s
+--------------------------------------------------

@@ -27,8 +27,8 @@ for model_name in models:
         i_t = perf_counter_ns()
         mc.toggle_ai_model(model_name)
         e_t = perf_counter_ns()
-        initiate_time = (e_t - i_t) / (10**9)
-        results[model_name]["initiate"].append(initiate_time)
+        initiate_time_mean = (e_t - i_t) / (10**9)
+        results[model_name]["initiate"].append(initiate_time_mean)
 
         mc.log_data()
         mc.register_log()
@@ -41,16 +41,21 @@ for model_name in models:
         i_t = perf_counter_ns()
         mc.toggle_ai_model(model_name)
         e_t = perf_counter_ns()
-        deinitiate_time = (e_t - i_t) / (10**9)
-        results[model_name]["deinitiate"].append(deinitiate_time)
+        deinitiate_time_mean = (e_t - i_t) / (10**9)
+        results[model_name]["deinitiate"].append(deinitiate_time_mean)
 
 for model_name in results:
-    initiate_time = np.mean(results[model_name]["initiate"])
-    deinitiate_time = np.mean(results[model_name]["deinitiate"])
+    initiate_time_mean = np.mean(results[model_name]["initiate"])
+    deinitiate_time_mean = np.mean(results[model_name]["deinitiate"])
+
+    initiate_time_std = np.std(results[model_name]["initiate"])
+    deinitiate_time_std = np.std(results[model_name]["deinitiate"])
 
     print("-" * 50)
     print(f"Model: {model_name}")
-    print(f"Mean initiate time: {initiate_time:.3f} s")
-    print(f"Mean deinitiate time: {deinitiate_time:.3f} s")
+    print(f"Mean initiate time: {initiate_time_mean:.3f} ({initiate_time_std:.3f}) s")
+    print(
+        f"Mean deinitiate time: {deinitiate_time_mean:.3f} ({deinitiate_time_std:.3f}) s"
+    )
 
 print("-" * 50)

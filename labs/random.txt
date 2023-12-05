@@ -1,0 +1,5 @@
+--------------------------------------------------
+Random model switching experiment
+Mean initiate time: 0.650 (0.009) s
+Mean deinitiate time: 0.054 (0.012) s
+--------------------------------------------------
