@@ -1,17 +1,16 @@
 ```mermaid
 classDiagram
+  direction LR
   UI <--> MainController
   MainController <--> AIMSM
   AIMSM *-- FastSamModule
   AIMSM *-- ImageCaptioningModule
   AIMSM *-- RoomClassificationModule 
   AIMSM *-- YoloV8Module 
-  namespace A {
+  YoloV8Module --|> AIModule
   FastSamModule --|> AIModule
   ImageCaptioningModule --|> AIModule
   RoomClassificationModule --|> AIModule
-  YoloV8Module --|> AIModule
-  }
   AIModule *-- ModuleOutput
 
   class MainController {
