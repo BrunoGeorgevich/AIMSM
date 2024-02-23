@@ -17,16 +17,16 @@ input_data = {
 
 models = ["Yolo V8", "Fast SAM", "Image Captioning", "Room Classification"]
 results = {}
-rounds = 250
+rounds = 200
 
 for model_name in models:
     mc.toggle_ai_model(model_name)
 
 for _ in tqdm(range(rounds)):
-    mc.log_data()
-    mc.register_log()
+    # mc.log_data()
+    # mc.register_log()
 
     mc.process_models()
 
     mc.log_data()
-    mc.register_log()
+    # mc.register_log()

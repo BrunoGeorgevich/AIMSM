@@ -1,0 +1,1035 @@
+FPS;CPU;RAM;GPU;VRAM;Running Models
+1.5751311241516273;14.40;1.6;32.0;0.3;Room Classification
+15.400900771121533;19.20;3.0;25.0;0.4;Room Classification
+14.02126324569268;19.10;3.0;23.0;0.4;Room Classification
+15.1400128708811;17.30;3.0;23.0;0.4;Room Classification
+15.40199072574021;16.30;3.0;22.0;0.4;Room Classification
+14.922607551945056;19.10;3.0;18.0;0.4;Room Classification
+15.235746205139396;17.50;3.0;18.0;0.4;Room Classification
+14.3448560779736;16.00;3.0;20.0;0.4;Room Classification
+14.64490398786949;20.00;3.0;20.0;0.4;Room Classification
+14.413401165329407;15.80;3.0;21.0;0.4;Room Classification
+15.162950543580568;18.40;3.0;19.0;0.4;Room Classification
+14.688126999533363;17.70;3.0;19.0;0.4;Room Classification
+14.639680855017616;17.20;3.0;21.0;0.4;Room Classification
+15.381633240884984;20.00;3.0;21.0;0.4;Room Classification
+14.493515267800152;16.50;3.0;20.0;0.4;Room Classification
+1.995260768831858;21.60;3.2;19.0;0.4;Yolo V8,Room Classification
+6.758659182314507;24.10;3.2;28.0;0.5;Yolo V8,Room Classification
+6.989039320291083;15.30;3.2;25.0;0.5;Yolo V8,Room Classification
+6.538352629638862;15.10;3.2;18.0;0.5;Yolo V8,Room Classification
+6.757364280337201;15.60;3.2;26.0;0.5;Yolo V8,Room Classification
+6.708889330017409;15.20;3.2;25.0;0.5;Yolo V8,Room Classification
+6.9716277408532585;15.20;3.2;19.0;0.5;Yolo V8,Room Classification
+6.528186722443881;14.70;3.2;25.0;0.5;Yolo V8,Room Classification
+6.7971722839063595;19.00;3.2;26.0;0.5;Yolo V8,Room Classification
+7.083363115922665;15.00;3.2;22.0;0.5;Yolo V8,Room Classification
+6.73556879631294;16.20;3.2;23.0;0.5;Yolo V8,Room Classification
+6.969518157199529;15.00;3.2;25.0;0.5;Yolo V8,Room Classification
+6.573182082276557;14.20;3.2;26.0;0.5;Yolo V8,Room Classification
+6.5269371690163;16.10;3.2;26.0;0.5;Yolo V8,Room Classification
+6.2827280261086065;16.00;3.2;36.0;0.5;Yolo V8,Room Classification
+6.2339680264906;15.40;3.2;33.0;0.5;Yolo V8,Room Classification
+6.456821933917113;20.20;3.2;30.0;0.5;Yolo V8,Room Classification
+6.304701123720043;17.20;3.2;38.0;0.5;Yolo V8,Room Classification
+6.53030105071378;15.70;3.2;33.0;0.5;Yolo V8,Room Classification
+6.175305625908669;16.80;3.2;35.0;0.5;Yolo V8,Room Classification
+13.535410881810362;14.40;3.2;37.0;0.3;Room Classification
+13.607280918567193;20.60;3.2;26.0;0.4;Room Classification
+13.38138230871878;20.00;3.2;33.0;0.4;Room Classification
+13.471436936690063;16.30;3.2;33.0;0.4;Room Classification
+13.421807202064498;17.30;3.2;30.0;0.4;Room Classification
+12.823449061519979;18.30;3.2;32.0;0.4;Room Classification
+13.129920749600284;25.50;3.2;32.0;0.4;Room Classification
+13.601624839119989;17.10;3.2;32.0;0.4;Room Classification
+13.34364957568925;15.80;3.2;30.0;0.4;Room Classification
+13.791039928242489;20.40;3.2;30.0;0.4;Room Classification
+13.94063692022927;16.00;3.2;32.0;0.4;Room Classification
+12.641916095788304;20.00;3.2;29.0;0.4;Room Classification
+13.500137066890943;18.90;3.2;29.0;0.4;Room Classification
+13.5021202785342;16.70;3.2;35.0;0.4;Room Classification
+13.519838971121331;16.30;3.2;28.0;0.4;Room Classification
+13.714323267994684;17.50;3.2;28.0;0.4;Room Classification
+13.539303691382319;16.70;3.2;33.0;0.4;Room Classification
+12.895468391731335;16.20;3.2;30.0;0.4;Room Classification
+13.50204498594329;16.70;3.2;30.0;0.4;Room Classification
+13.57608126900629;17.30;3.2;33.0;0.4;Room Classification
+13.85937323605889;15.70;3.2;32.0;0.4;Room Classification
+13.561097204544994;19.40;3.2;32.0;0.4;Room Classification
+13.49480041967923;24.50;3.2;35.0;0.4;Room Classification
+14.11392722541101;16.70;3.2;33.0;0.4;Room Classification
+14.039036186005774;15.10;3.2;33.0;0.4;Room Classification
+13.26868018543042;19.20;3.2;31.0;0.4;Room Classification
+13.724380835540641;16.20;3.2;31.0;0.4;Room Classification
+14.13444842834666;16.30;3.2;31.0;0.4;Room Classification
+14.263140014023296;16.00;3.2;37.0;0.4;Room Classification
+13.34162079230967;16.50;3.2;37.0;0.4;Room Classification
+12.989666252847961;18.10;3.2;36.0;0.4;Room Classification
+13.338627345695826;16.80;3.2;35.0;0.4;Room Classification
+14.026607773509951;18.30;3.2;35.0;0.4;Room Classification
+13.370598796748926;15.70;3.2;38.0;0.4;Room Classification
+13.345241737297794;17.30;3.2;34.0;0.4;Room Classification
+13.142477745829545;17.90;3.2;34.0;0.4;Room Classification
+13.08352128792035;16.30;3.2;35.0;0.4;Room Classification
+12.812576579065976;23.20;3.2;35.0;0.4;Room Classification
+13.783154292187916;19.30;3.2;35.0;0.4;Room Classification
+14.294333769072047;17.30;3.2;38.0;0.4;Room Classification
+13.476733322982508;18.40;3.2;35.0;0.4;Room Classification
+13.260499069705071;18.10;3.2;35.0;0.4;Room Classification
+13.205573808642974;15.40;3.2;39.0;0.4;Room Classification
+13.432466909152557;15.70;3.2;35.0;0.4;Room Classification
+13.45187628924054;18.20;3.2;35.0;0.4;Room Classification
+13.721869532919062;16.20;3.2;41.0;0.4;Room Classification
+13.884968506557108;18.50;3.2;34.0;0.4;Room Classification
+13.911541709208981;16.50;3.2;34.0;0.4;Room Classification
+13.276954428004297;17.50;3.2;38.0;0.4;Room Classification
+14.04684231396203;15.40;3.2;36.0;0.4;Room Classification
+13.70755957923973;18.90;3.2;36.0;0.4;Room Classification
+12.177785091965015;17.90;3.2;37.0;0.4;Room Classification
+13.372866915664305;14.80;3.2;35.0;0.4;Room Classification
+13.81122911493596;24.10;3.2;35.0;0.4;Room Classification
+13.174697850552022;21.10;3.2;40.0;0.4;Room Classification
+13.811130879270339;17.00;3.2;34.0;0.4;Room Classification
+14.1252877428162;16.00;3.2;34.0;0.4;Room Classification
+12.841808985046141;15.20;3.2;38.0;0.4;Room Classification
+12.125311358386949;16.50;3.2;38.0;0.4;Room Classification
+13.522411808641195;14.70;3.2;35.0;0.4;Room Classification
+13.198375892255957;15.50;3.2;37.0;0.4;Room Classification
+12.83775771472181;18.10;3.2;37.0;0.4;Room Classification
+12.788984694079646;15.70;3.2;35.0;0.4;Room Classification
+12.211403624205635;17.00;3.2;39.0;0.4;Room Classification
+13.86562160547703;16.10;3.2;36.0;0.4;Room Classification
+13.760757317199069;16.80;3.2;36.0;0.4;Room Classification
+13.356417853599151;19.00;3.2;37.0;0.4;Room Classification
+11.469303710334906;16.30;3.2;37.0;0.4;Room Classification
+13.405701061250245;18.40;3.2;35.0;0.4;Room Classification
+13.147712006873027;18.30;3.2;40.0;0.4;Room Classification
+13.461826466905398;19.30;3.2;36.0;0.4;Room Classification
+12.346514917145779;15.70;3.2;36.0;0.4;Room Classification
+13.772239739882982;14.80;3.2;38.0;0.4;Room Classification
+2.196652474725561;19.90;3.3;36.0;0.4;Yolo V8,Room Classification
+6.668816159459656;15.20;3.2;28.0;0.5;Yolo V8,Room Classification
+6.302417601115719;14.60;3.2;35.0;0.5;Yolo V8,Room Classification
+6.631649655397128;15.20;3.2;37.0;0.5;Yolo V8,Room Classification
+6.114820391710291;18.50;3.2;28.0;0.5;Yolo V8,Room Classification
+6.6966797119036405;17.30;3.2;38.0;0.5;Yolo V8,Room Classification
+6.4303722634953395;14.60;3.2;35.0;0.5;Yolo V8,Room Classification
+6.3061018806747775;15.60;3.2;26.0;0.5;Yolo V8,Room Classification
+5.877417811707853;15.80;3.2;38.0;0.5;Yolo V8,Room Classification
+6.744024039367434;14.30;3.2;36.0;0.5;Yolo V8,Room Classification
+6.1546192118856675;13.70;3.2;27.0;0.5;Yolo V8,Room Classification
+6.204862033099249;13.90;3.2;39.0;0.5;Yolo V8,Room Classification
+6.131194202185342;17.60;3.2;33.0;0.5;Yolo V8,Room Classification
+6.1466337127688915;14.50;3.2;39.0;0.5;Yolo V8,Room Classification
+6.331753824581854;15.80;3.2;40.0;0.5;Yolo V8,Room Classification
+6.278979412897287;14.20;3.2;29.0;0.5;Yolo V8,Room Classification
+6.226815154300799;19.90;3.2;37.0;0.5;Yolo V8,Room Classification
+6.221696569038794;14.10;3.2;39.0;0.5;Yolo V8,Room Classification
+6.286412986404103;14.40;3.2;30.0;0.5;Yolo V8,Room Classification
+6.703771011311109;19.00;3.2;38.0;0.5;Yolo V8,Room Classification
+6.332837793008668;15.00;3.2;35.0;0.5;Yolo V8,Room Classification
+6.276622529834219;14.40;3.2;32.0;0.5;Yolo V8,Room Classification
+6.053641071369827;16.70;3.2;40.0;0.5;Yolo V8,Room Classification
+6.0342837833192675;15.60;3.2;31.0;0.5;Yolo V8,Room Classification
+6.0797212938970695;14.60;3.2;39.0;0.5;Yolo V8,Room Classification
+6.2812859073504255;13.90;3.2;42.0;0.5;Yolo V8,Room Classification
+6.212234506343008;15.90;3.2;29.0;0.5;Yolo V8,Room Classification
+6.008896772571934;18.10;3.2;39.0;0.5;Yolo V8,Room Classification
+6.039352918854203;15.90;3.2;30.0;0.5;Yolo V8,Room Classification
+6.296221863285394;14.30;3.2;41.0;0.5;Yolo V8,Room Classification
+6.349974151805509;14.80;3.2;39.0;0.5;Yolo V8,Room Classification
+5.9229222058632995;16.20;3.2;28.0;0.5;Yolo V8,Room Classification
+6.3055011392557185;16.20;3.2;39.0;0.5;Yolo V8,Room Classification
+6.309602635982365;16.80;3.2;32.0;0.5;Yolo V8,Room Classification
+6.15687131836688;17.90;3.2;27.0;0.5;Yolo V8,Room Classification
+6.386071171547865;16.40;3.2;34.0;0.5;Yolo V8,Room Classification
+6.101396149519919;15.00;3.2;30.0;0.5;Yolo V8,Room Classification
+6.558041970132776;14.50;3.2;38.0;0.5;Yolo V8,Room Classification
+5.935160226275395;16.40;3.2;36.0;0.5;Yolo V8,Room Classification
+6.094914742023554;15.20;3.2;26.0;0.5;Yolo V8,Room Classification
+6.1767964687495205;16.90;3.2;37.0;0.5;Yolo V8,Room Classification
+5.993267594687437;14.70;3.2;35.0;0.5;Yolo V8,Room Classification
+6.287160221175222;17.20;3.2;33.0;0.5;Yolo V8,Room Classification
+6.082976927143655;14.50;3.2;40.0;0.5;Yolo V8,Room Classification
+6.042351421186736;14.50;3.2;27.0;0.5;Yolo V8,Room Classification
+5.649990724702304;14.50;3.2;40.0;0.5;Yolo V8,Room Classification
+6.033202086640223;14.50;3.2;37.0;0.5;Yolo V8,Room Classification
+6.254057789047016;14.30;3.2;34.0;0.5;Yolo V8,Room Classification
+5.898169611590402;15.50;3.2;37.0;0.5;Yolo V8,Room Classification
+6.077084941951346;18.30;3.2;27.0;0.5;Yolo V8,Room Classification
+6.0286772359960965;16.20;3.2;38.0;0.5;Yolo V8,Room Classification
+5.8947365690774856;15.80;3.2;36.0;0.5;Yolo V8,Room Classification
+5.759795305149444;15.30;3.2;32.0;0.5;Yolo V8,Room Classification
+6.317792400060481;15.90;3.2;42.0;0.5;Yolo V8,Room Classification
+6.0319569702205005;15.30;3.2;28.0;0.5;Yolo V8,Room Classification
+6.534452262420356;14.90;3.2;40.0;0.5;Yolo V8,Room Classification
+5.922489548337701;14.90;3.2;38.0;0.5;Yolo V8,Room Classification
+6.151065455890193;18.10;3.2;29.0;0.5;Yolo V8,Room Classification
+6.000804515854851;14.80;3.2;40.0;0.5;Yolo V8,Room Classification
+5.862007464976486;16.70;3.2;34.0;0.5;Yolo V8,Room Classification
+6.105217513995023;14.80;3.2;41.0;0.5;Yolo V8,Room Classification
+6.119733965862269;15.50;3.2;38.0;0.5;Yolo V8,Room Classification
+5.88278518747486;16.10;3.2;29.0;0.5;Yolo V8,Room Classification
+5.823193203199594;14.30;3.2;42.0;0.5;Yolo V8,Room Classification
+6.204236697041905;17.70;3.2;36.0;0.5;Yolo V8,Room Classification
+6.100892397645731;15.70;3.2;40.0;0.5;Yolo V8,Room Classification
+6.015845074175401;16.90;3.2;39.0;0.5;Yolo V8,Room Classification
+5.91602126177221;17.50;3.2;30.0;0.5;Yolo V8,Room Classification
+5.7956517299787;15.70;3.2;39.0;0.5;Yolo V8,Room Classification
+6.097315261227358;16.00;3.2;38.0;0.5;Yolo V8,Room Classification
+5.905133312926492;17.00;3.2;40.0;0.5;Yolo V8,Room Classification
+6.129118273330719;19.80;3.2;39.0;0.5;Yolo V8,Room Classification
+5.622436246373662;16.10;3.2;29.0;0.5;Yolo V8,Room Classification
+6.17459560690028;15.80;3.2;43.0;0.5;Yolo V8,Room Classification
+6.202065014734577;18.30;3.2;29.0;0.5;Yolo V8,Room Classification
+5.980214472375711;14.70;3.2;40.0;0.5;Yolo V8,Room Classification
+6.571082431208326;14.00;3.2;42.0;0.5;Yolo V8,Room Classification
+6.144060612467767;16.00;3.2;27.0;0.5;Yolo V8,Room Classification
+6.30461065572777;16.30;3.2;39.0;0.5;Yolo V8,Room Classification
+6.088160855269576;22.00;3.2;36.0;0.5;Yolo V8,Room Classification
+6.370893964411016;16.20;3.2;31.0;0.5;Yolo V8,Room Classification
+6.411535347168159;15.70;3.2;38.0;0.5;Yolo V8,Room Classification
+5.987700938930574;15.70;3.2;35.0;0.5;Yolo V8,Room Classification
+6.022118192283753;15.70;3.2;39.0;0.5;Yolo V8,Room Classification
+6.180343282210995;14.20;3.2;40.0;0.5;Yolo V8,Room Classification
+6.070756402124879;14.20;3.2;28.0;0.5;Yolo V8,Room Classification
+6.303624897601697;20.60;3.2;40.0;0.5;Yolo V8,Room Classification
+6.430539072465065;15.50;3.2;37.0;0.5;Yolo V8,Room Classification
+5.929027606691745;17.80;3.2;30.0;0.5;Yolo V8,Room Classification
+6.14226988393469;15.20;3.2;42.0;0.5;Yolo V8,Room Classification
+6.463181873712016;16.40;3.2;29.0;0.5;Yolo V8,Room Classification
+6.466299454584978;15.60;3.2;36.0;0.5;Yolo V8,Room Classification
+6.348546463132808;15.40;3.2;38.0;0.5;Yolo V8,Room Classification
+6.283912942811503;15.70;3.2;28.0;0.5;Yolo V8,Room Classification
+6.272264185770431;21.20;3.2;40.0;0.5;Yolo V8,Room Classification
+6.18987220044367;15.10;3.2;37.0;0.5;Yolo V8,Room Classification
+6.220173142369836;14.80;3.2;28.0;0.5;Yolo V8,Room Classification
+6.132193548239173;15.30;3.2;40.0;0.5;Yolo V8,Room Classification
+6.277163483413041;14.60;3.2;36.0;0.5;Yolo V8,Room Classification
+5.891681448342924;16.00;3.2;32.0;0.5;Yolo V8,Room Classification
+6.091989962215978;15.40;3.2;40.0;0.5;Yolo V8,Room Classification
+6.350493100199083;20.60;3.2;30.0;0.5;Yolo V8,Room Classification
+5.9509177350506715;15.20;3.2;38.0;0.5;Yolo V8,Room Classification
+6.12356083078536;15.90;3.2;40.0;0.5;Yolo V8,Room Classification
+6.491218634017793;14.70;3.2;28.0;0.5;Yolo V8,Room Classification
+6.003380059062552;16.70;3.2;38.0;0.5;Yolo V8,Room Classification
+6.201695959201775;15.90;3.2;36.0;0.5;Yolo V8,Room Classification
+5.95653641654023;14.40;3.2;37.0;0.5;Yolo V8,Room Classification
+5.924978491141929;18.40;3.2;39.0;0.5;Yolo V8,Room Classification
+6.480029966752877;26.00;3.2;29.0;0.5;Yolo V8,Room Classification
+6.210212526828791;16.70;3.2;39.0;0.5;Yolo V8,Room Classification
+6.156022241436213;15.10;3.2;38.0;0.5;Yolo V8,Room Classification
+6.031453123319553;15.10;3.2;32.0;0.5;Yolo V8,Room Classification
+5.760916614370363;14.80;3.2;43.0;0.5;Yolo V8,Room Classification
+6.293755565430052;14.70;3.2;29.0;0.5;Yolo V8,Room Classification
+5.903119908666024;14.10;3.2;39.0;0.5;Yolo V8,Room Classification
+5.9885796707700205;20.80;3.2;40.0;0.5;Yolo V8,Room Classification
+6.434931857701037;15.60;3.2;27.0;0.5;Yolo V8,Room Classification
+6.270076549988313;17.20;3.2;35.0;0.5;Yolo V8,Room Classification
+6.423453230228105;14.10;3.2;33.0;0.5;Yolo V8,Room Classification
+6.455610175427796;13.00;3.2;28.0;0.5;Yolo V8,Room Classification
+6.538542701920965;14.80;3.2;35.0;0.5;Yolo V8,Room Classification
+5.863239401535533;15.20;3.2;32.0;0.5;Yolo V8,Room Classification
+6.21770987817206;14.70;3.2;32.0;0.5;Yolo V8,Room Classification
+6.164709966156904;20.20;3.2;38.0;0.5;Yolo V8,Room Classification
+6.293969711764645;15.50;3.2;28.0;0.5;Yolo V8,Room Classification
+6.2042814642032456;15.00;3.2;39.0;0.5;Yolo V8,Room Classification
+5.906709884777342;14.70;3.2;38.0;0.5;Yolo V8,Room Classification
+6.363285532572519;15.70;3.2;28.0;0.5;Yolo V8,Room Classification
+5.890048011722719;15.30;3.2;39.0;0.5;Yolo V8,Room Classification
+6.173359668885433;15.20;3.2;37.0;0.5;Yolo V8,Room Classification
+6.125944005686453;18.60;3.2;35.0;0.5;Yolo V8,Room Classification
+6.161002508974665;14.70;3.2;41.0;0.5;Yolo V8,Room Classification
+5.7800892226101634;16.40;3.2;28.0;0.5;Yolo V8,Room Classification
+6.151014302566347;14.60;3.2;43.0;0.5;Yolo V8,Room Classification
+6.121979611164021;16.40;3.2;39.0;0.5;Yolo V8,Room Classification
+5.974513537773608;14.20;3.2;30.0;0.5;Yolo V8,Room Classification
+6.302949542747549;15.10;3.2;39.0;0.5;Yolo V8,Room Classification
+6.067851258873191;19.00;3.2;29.0;0.5;Yolo V8,Room Classification
+6.112353542057164;17.80;3.2;39.0;0.5;Yolo V8,Room Classification
+6.084953286360162;14.00;3.2;37.0;0.5;Yolo V8,Room Classification
+5.834000368615359;14.70;3.2;27.0;0.5;Yolo V8,Room Classification
+6.189467548954599;15.50;3.2;40.0;0.5;Yolo V8,Room Classification
+5.946458598158664;15.10;3.2;35.0;0.5;Yolo V8,Room Classification
+6.073192328437383;14.00;3.2;40.0;0.5;Yolo V8,Room Classification
+6.114979345140367;13.90;3.2;38.0;0.5;Yolo V8,Room Classification
+6.026775432455001;17.80;3.2;28.0;0.5;Yolo V8,Room Classification
+6.161043048319611;15.40;3.2;41.0;0.5;Yolo V8,Room Classification
+5.8698704200120835;15.50;3.2;35.0;0.5;Yolo V8,Room Classification
+6.146619242637759;15.40;3.2;33.0;0.5;Yolo V8,Room Classification
+5.685484608700713;16.60;3.2;39.0;0.5;Yolo V8,Room Classification
+5.811066672076964;14.80;3.2;29.0;0.5;Yolo V8,Room Classification
+6.2802854204020875;15.70;3.2;42.0;0.5;Yolo V8,Room Classification
+6.005324212350961;18.20;3.2;34.0;0.5;Yolo V8,Room Classification
+6.240004799302144;16.60;3.2;37.0;0.5;Yolo V8,Room Classification
+6.23509170089796;14.90;3.2;37.0;0.5;Yolo V8,Room Classification
+6.1343157382709785;14.90;3.2;27.0;0.5;Yolo V8,Room Classification
+6.0283479323950875;15.80;3.2;40.0;0.5;Yolo V8,Room Classification
+5.9239900537683425;16.30;3.2;38.0;0.5;Yolo V8,Room Classification
+5.795584182149643;14.70;3.2;28.0;0.5;Yolo V8,Room Classification
+6.114668513167153;16.80;3.2;43.0;0.5;Yolo V8,Room Classification
+6.25653001856535;19.20;3.2;27.0;0.5;Yolo V8,Room Classification
+5.679342375761595;14.40;3.2;37.0;0.5;Yolo V8,Room Classification
+6.314053946313024;16.50;3.2;38.0;0.5;Yolo V8,Room Classification
+6.084820918911326;17.10;3.2;25.0;0.5;Yolo V8,Room Classification
+5.788652432855916;15.50;3.2;39.0;0.5;Yolo V8,Room Classification
+6.295752492511439;16.10;3.2;27.0;0.5;Yolo V8,Room Classification
+5.885561922630528;14.50;3.2;40.0;0.5;Yolo V8,Room Classification
+6.195864562780415;17.90;3.2;37.0;0.5;Yolo V8,Room Classification
+5.860662457060684;17.30;3.2;29.0;0.5;Yolo V8,Room Classification
+6.19586110776266;15.20;3.2;42.0;0.5;Yolo V8,Room Classification
+6.066898905517876;14.40;3.2;34.0;0.5;Yolo V8,Room Classification
+6.092704718450322;14.30;3.2;40.0;0.5;Yolo V8,Room Classification
+5.877811812924058;14.20;3.2;37.0;0.5;Yolo V8,Room Classification
+6.431646293035763;17.60;3.2;27.0;0.5;Yolo V8,Room Classification
+6.19010416521356;19.70;3.2;37.0;0.5;Yolo V8,Room Classification
+6.260744925225581;15.90;3.2;37.0;0.5;Yolo V8,Room Classification
+5.832006532392294;16.70;3.2;29.0;0.5;Yolo V8,Room Classification
+5.729618927563914;17.00;3.2;42.0;0.5;Yolo V8,Room Classification
+5.625015655119526;18.30;3.2;30.0;0.5;Yolo V8,Room Classification
+6.248987117290493;15.90;3.2;40.0;0.5;Yolo V8,Room Classification
+6.088782510572294;15.30;3.2;36.0;0.5;Yolo V8,Room Classification
+5.865439807492019;18.50;3.2;34.0;0.5;Yolo V8,Room Classification
+6.2921121232986446;20.30;3.2;40.0;0.5;Yolo V8,Room Classification
+5.8721715973412305;16.40;3.2;27.0;0.5;Yolo V8,Room Classification
+6.1514120495542;15.20;3.2;41.0;0.5;Yolo V8,Room Classification
+6.132825582819495;15.40;3.2;37.0;0.5;Yolo V8,Room Classification
+6.234877538359794;15.50;3.2;32.0;0.5;Yolo V8,Room Classification
+5.7459663790060445;18.10;3.2;38.0;0.5;Yolo V8,Room Classification
+5.671628649804019;13.90;3.2;27.0;0.5;Yolo V8,Room Classification
+6.099956101039171;18.80;3.2;42.0;0.5;Yolo V8,Room Classification
+6.369160423348358;16.50;3.2;33.0;0.5;Yolo V8,Room Classification
+5.992410935156895;15.30;3.2;31.0;0.5;Yolo V8,Room Classification
+6.137046771975351;16.50;3.2;37.0;0.5;Yolo V8,Room Classification
+5.843358593752067;15.10;3.2;26.0;0.5;Yolo V8,Room Classification
+6.103938064919074;15.50;3.2;39.0;0.5;Yolo V8,Room Classification
+5.911169824541341;18.30;3.2;39.0;0.5;Yolo V8,Room Classification
+6.181916620403973;16.70;3.2;30.0;0.5;Yolo V8,Room Classification
+13.77476249446435;17.80;3.2;38.0;0.3;Room Classification
+13.854764027707084;18.10;3.2;25.0;0.4;Room Classification
+13.116200922929105;18.30;3.2;27.0;0.4;Room Classification
+13.8616382557768;19.60;3.2;27.0;0.4;Room Classification
+13.965347810370432;16.70;3.2;31.0;0.4;Room Classification
+13.225283997360698;15.30;3.2;30.0;0.4;Room Classification
+13.468442281428722;20.20;3.2;30.0;0.4;Room Classification
+13.187607109733662;17.10;3.2;32.0;0.4;Room Classification
+13.508142566511566;19.30;3.2;30.0;0.4;Room Classification
+13.164653400655006;17.50;3.2;30.0;0.4;Room Classification
+13.91787247160261;15.40;3.2;34.0;0.4;Room Classification
+2.3044473196989217;15.10;6.3;70.0;2.1;Image Captioning,Room Classification
+2.635169712835127;16.70;6.3;19.0;2.1;Image Captioning,Room Classification
+2.6022507324546384;15.80;6.3;37.0;2.1;Image Captioning,Room Classification
+2.6083386908183623;15.80;6.3;20.0;2.1;Image Captioning,Room Classification
+2.5712067027373244;18.50;6.3;32.0;2.1;Image Captioning,Room Classification
+2.554765270429645;15.50;6.3;21.0;2.1;Image Captioning,Room Classification
+2.567295634753578;16.10;6.3;33.0;2.1;Image Captioning,Room Classification
+2.5202512394152916;16.60;6.3;22.0;2.1;Image Captioning,Room Classification
+2.5744039159509313;18.80;6.3;16.0;2.1;Image Captioning,Room Classification
+2.6154486974986084;16.00;6.3;25.0;2.1;Image Captioning,Room Classification
+2.3515284335164037;16.30;6.3;15.0;2.1;Image Captioning,Room Classification
+2.3294638206009477;16.40;6.3;30.0;2.1;Image Captioning,Room Classification
+2.3536143267863756;18.10;6.3;21.0;2.1;Image Captioning,Room Classification
+2.3810183578403312;16.10;6.3;16.0;2.1;Image Captioning,Room Classification
+2.266524249159899;16.80;6.3;31.0;2.1;Image Captioning,Room Classification
+2.2656078061593616;15.80;6.3;25.0;2.1;Image Captioning,Room Classification
+2.4062553128604134;17.20;6.3;20.0;2.1;Image Captioning,Room Classification
+2.3698949589090463;16.00;6.3;16.0;2.1;Image Captioning,Room Classification
+2.3858157356743006;16.50;6.3;30.0;2.1;Image Captioning,Room Classification
+2.338139761511849;16.50;6.3;20.0;2.1;Image Captioning,Room Classification
+2.364484321884752;17.30;6.3;16.0;2.1;Image Captioning,Room Classification
+2.361603370936847;16.50;6.3;32.0;2.1;Image Captioning,Room Classification
+2.405478022039929;17.80;6.3;24.0;2.1;Image Captioning,Room Classification
+2.304623842866873;15.90;6.3;16.0;2.1;Image Captioning,Room Classification
+2.364636686212648;17.80;6.3;35.0;2.1;Image Captioning,Room Classification
+2.3972705617134666;15.30;6.3;24.0;2.1;Image Captioning,Room Classification
+2.5006924479905566;16.40;6.3;14.0;2.1;Image Captioning,Room Classification
+2.2767546136161982;21.90;6.3;31.0;2.1;Image Captioning,Room Classification
+2.766556685338847;17.80;6.3;26.0;2.1;Image Captioning,Room Classification
+2.667421682157137;15.60;6.3;36.0;2.1;Image Captioning,Room Classification
+2.487809323828145;16.20;6.3;22.0;2.1;Image Captioning,Room Classification
+13.651376551541295;15.50;5.8;15.0;0.3;Room Classification
+13.946421752658113;16.80;5.8;14.0;0.4;Room Classification
+13.68317452283384;15.00;5.8;14.0;0.4;Room Classification
+14.105567051199724;21.10;5.8;17.0;0.4;Room Classification
+14.24262688051393;16.70;5.8;13.0;0.4;Room Classification
+14.177761166464638;15.70;5.8;13.0;0.4;Room Classification
+13.899963105392576;18.10;5.8;16.0;0.4;Room Classification
+13.980951708182742;17.10;5.8;16.0;0.4;Room Classification
+13.113030401257353;15.80;5.8;15.0;0.4;Room Classification
+13.707721360541953;16.30;5.8;22.0;0.4;Room Classification
+13.934603290224617;18.30;5.8;22.0;0.4;Room Classification
+2.4082887402933446;19.80;5.8;24.0;0.4;Fast SAM,Room Classification
+5.593489451237808;16.30;3.2;30.0;0.5;Fast SAM,Room Classification
+6.246516083728631;22.10;3.2;34.0;0.5;Fast SAM,Room Classification
+6.551045560306777;18.50;3.2;23.0;0.5;Fast SAM,Room Classification
+6.308643732690293;15.10;3.2;31.0;0.5;Fast SAM,Room Classification
+6.501584289813602;16.10;3.2;31.0;0.5;Fast SAM,Room Classification
+6.555172834687408;16.60;3.2;23.0;0.5;Fast SAM,Room Classification
+6.243105582452323;16.00;3.2;30.0;0.5;Fast SAM,Room Classification
+6.389360334956495;14.40;3.2;31.0;0.5;Fast SAM,Room Classification
+5.808605957404043;19.10;3.2;29.0;0.5;Fast SAM,Room Classification
+6.089364727800003;17.00;3.2;37.0;0.5;Fast SAM,Room Classification
+6.152316214796536;15.50;3.2;27.0;0.5;Fast SAM,Room Classification
+6.083346790710477;15.00;3.2;41.0;0.5;Fast SAM,Room Classification
+6.07343156529865;15.90;3.2;37.0;0.5;Fast SAM,Room Classification
+6.114292476010136;15.60;3.2;34.0;0.5;Fast SAM,Room Classification
+5.991994563450056;16.10;3.2;40.0;0.5;Fast SAM,Room Classification
+6.103455983682949;18.20;3.2;29.0;0.5;Fast SAM,Room Classification
+6.1779031367423825;18.50;3.2;41.0;0.5;Fast SAM,Room Classification
+6.018957754754344;16.00;3.2;36.0;0.5;Fast SAM,Room Classification
+6.3175584698569445;15.10;3.2;41.0;0.5;Fast SAM,Room Classification
+6.109062179175953;15.00;3.2;39.0;0.5;Fast SAM,Room Classification
+6.237009673216347;14.30;3.2;26.0;0.5;Fast SAM,Room Classification
+6.2188928259966;15.50;3.2;41.0;0.5;Fast SAM,Room Classification
+6.18295439972692;14.20;3.2;35.0;0.5;Fast SAM,Room Classification
+6.033214498922318;19.30;3.2;34.0;0.5;Fast SAM,Room Classification
+6.071159870561369;15.60;3.2;37.0;0.5;Fast SAM,Room Classification
+6.183668330884934;14.20;3.2;28.0;0.5;Fast SAM,Room Classification
+6.021690248712506;16.40;3.2;36.0;0.5;Fast SAM,Room Classification
+6.113233031278829;15.70;3.2;33.0;0.5;Fast SAM,Room Classification
+6.154488530949593;17.60;3.2;39.0;0.5;Fast SAM,Room Classification
+6.077935396363005;14.70;3.2;40.0;0.5;Fast SAM,Room Classification
+5.96117460751245;17.60;3.2;29.0;0.5;Fast SAM,Room Classification
+5.89552454869656;16.10;3.2;39.0;0.5;Fast SAM,Room Classification
+5.937561576223375;16.60;3.2;38.0;0.5;Fast SAM,Room Classification
+5.990882822917379;14.00;3.2;38.0;0.5;Fast SAM,Room Classification
+6.241434489373484;14.40;3.2;45.0;0.5;Fast SAM,Room Classification
+6.5411588784071455;13.60;3.2;29.0;0.5;Fast SAM,Room Classification
+6.351036012118822;15.90;3.2;37.0;0.5;Fast SAM,Room Classification
+6.348042219028339;17.80;3.2;38.0;0.5;Fast SAM,Room Classification
+6.459011346513255;18.40;3.2;29.0;0.5;Fast SAM,Room Classification
+6.09732667469697;17.00;3.2;37.0;0.5;Fast SAM,Room Classification
+6.335980522912216;14.50;3.2;36.0;0.5;Fast SAM,Room Classification
+6.125557012205531;14.40;3.2;36.0;0.5;Fast SAM,Room Classification
+5.887099501713976;14.00;3.2;39.0;0.5;Fast SAM,Room Classification
+5.705162474862584;15.90;3.2;31.0;0.5;Fast SAM,Room Classification
+6.438216097007146;15.00;3.2;43.0;0.5;Fast SAM,Room Classification
+6.2594942051940015;19.40;3.2;36.0;0.5;Fast SAM,Room Classification
+6.421099795546291;15.20;3.2;29.0;0.5;Fast SAM,Room Classification
+6.130321037420455;15.00;3.2;36.0;0.5;Fast SAM,Room Classification
+6.450506620527802;15.20;3.2;32.0;0.5;Fast SAM,Room Classification
+6.232595127524858;15.50;3.2;33.0;0.5;Fast SAM,Room Classification
+6.281371406540653;16.20;3.2;35.0;0.5;Fast SAM,Room Classification
+5.892141000455928;14.70;3.2;24.0;0.5;Fast SAM,Room Classification
+6.099258280199362;17.20;3.2;39.0;0.5;Fast SAM,Room Classification
+6.396950343486746;16.00;3.2;34.0;0.5;Fast SAM,Room Classification
+5.888718021824467;15.40;3.2;31.0;0.5;Fast SAM,Room Classification
+6.102326371578865;14.70;3.2;40.0;0.5;Fast SAM,Room Classification
+5.849741150431166;15.00;3.2;26.0;0.5;Fast SAM,Room Classification
+6.100420212787864;14.70;3.2;40.0;0.5;Fast SAM,Room Classification
+6.307898584714376;15.10;3.2;37.0;0.5;Fast SAM,Room Classification
+5.992882493188193;16.10;3.2;30.0;0.5;Fast SAM,Room Classification
+6.229298755453371;18.80;3.2;35.0;0.5;Fast SAM,Room Classification
+5.716690023456761;15.40;3.2;27.0;0.5;Fast SAM,Room Classification
+13.123898486694202;17.50;3.2;35.0;0.3;Room Classification
+12.984779267677217;16.00;3.2;26.0;0.4;Room Classification
+12.738701774667314;17.60;3.2;26.0;0.4;Room Classification
+13.273035349447687;19.10;3.2;26.0;0.4;Room Classification
+13.714860829274961;16.20;3.2;27.0;0.4;Room Classification
+12.75809286981966;20.40;3.2;31.0;0.4;Room Classification
+12.923818869535195;17.40;3.2;31.0;0.4;Room Classification
+13.623625917654987;15.40;3.2;28.0;0.4;Room Classification
+12.72934978683436;17.90;3.2;33.0;0.4;Room Classification
+14.069197773577065;24.40;3.2;28.0;0.4;Room Classification
+14.173823490841677;17.40;3.2;28.0;0.4;Room Classification
+2.558852153788512;16.00;6.3;70.0;2.1;Image Captioning,Room Classification
+2.6745136254563633;16.60;6.3;16.0;2.1;Image Captioning,Room Classification
+2.7636124599018403;16.30;6.3;25.0;2.1;Image Captioning,Room Classification
+2.6337699736760007;21.20;6.3;33.0;2.1;Image Captioning,Room Classification
+2.6706315289643907;17.20;6.3;19.0;2.1;Image Captioning,Room Classification
+2.724819050016417;17.20;6.3;32.0;2.1;Image Captioning,Room Classification
+2.732331387958849;16.00;6.3;14.0;2.1;Image Captioning,Room Classification
+2.474026965995943;16.60;6.3;26.0;2.1;Image Captioning,Room Classification
+2.647528887614223;18.90;6.3;15.0;2.1;Image Captioning,Room Classification
+2.6830519648461206;17.00;6.3;28.0;2.1;Image Captioning,Room Classification
+2.623575557529488;15.90;6.3;12.0;2.1;Image Captioning,Room Classification
+2.6283695145234978;15.40;6.3;23.0;2.1;Image Captioning,Room Classification
+2.520017278449157;19.30;6.3;15.0;2.1;Image Captioning,Room Classification
+2.613809028592417;14.60;6.3;26.0;2.1;Image Captioning,Room Classification
+2.6200189411671686;16.30;6.3;15.0;2.1;Image Captioning,Room Classification
+2.504211871507747;15.70;6.3;24.0;2.1;Image Captioning,Room Classification
+2.6087628108019185;18.40;6.3;16.0;2.1;Image Captioning,Room Classification
+2.6173119455149836;15.50;6.3;26.0;2.1;Image Captioning,Room Classification
+2.581414922563581;16.70;6.3;15.0;2.1;Image Captioning,Room Classification
+2.5421754598850934;15.80;6.3;29.0;2.1;Image Captioning,Room Classification
+2.570344236462104;18.10;6.3;15.0;2.1;Image Captioning,Room Classification
+2.606746680615198;16.00;6.3;28.0;2.1;Image Captioning,Room Classification
+2.505054172243767;15.10;6.3;16.0;2.1;Image Captioning,Room Classification
+2.4509102108233023;15.30;6.3;30.0;2.1;Image Captioning,Room Classification
+2.5206146769949287;18.70;6.3;18.0;2.1;Image Captioning,Room Classification
+2.5612118818664906;17.60;6.3;34.0;2.1;Image Captioning,Room Classification
+2.604930447199724;16.80;6.3;22.0;2.1;Image Captioning,Room Classification
+2.214910590713831;16.50;6.3;34.0;2.1;Image Captioning,Room Classification
+2.5876172773475363;17.50;6.3;30.0;2.1;Image Captioning,Room Classification
+2.318310445951492;14.70;6.3;16.0;2.1;Image Captioning,Room Classification
+2.5950911867558197;15.80;6.3;35.0;2.1;Image Captioning,Room Classification
+2.628305075232243;16.30;6.3;23.0;2.1;Image Captioning,Room Classification
+2.580902279096746;18.40;6.3;32.0;2.1;Image Captioning,Room Classification
+2.626254396266039;16.10;6.3;21.0;2.1;Image Captioning,Room Classification
+2.5870655636819673;17.00;6.3;33.0;2.1;Image Captioning,Room Classification
+2.2729041356600184;15.70;6.3;20.0;2.1;Image Captioning,Room Classification
+2.475746577653358;16.80;6.3;16.0;2.1;Image Captioning,Room Classification
+2.5951593147310734;14.80;6.3;31.0;2.1;Image Captioning,Room Classification
+2.582960787301233;15.40;6.3;17.0;2.1;Image Captioning,Room Classification
+2.6063136446795805;16.60;6.3;31.0;2.1;Image Captioning,Room Classification
+2.5879657650961194;16.50;6.3;14.0;2.1;Image Captioning,Room Classification
+2.589561157351947;14.80;6.3;30.0;2.1;Image Captioning,Room Classification
+13.952543882278714;16.60;5.8;15.0;0.3;Room Classification
+13.592402901531504;16.80;5.8;15.0;0.4;Room Classification
+14.193907080950867;15.50;5.8;15.0;0.4;Room Classification
+13.321819906138138;17.20;5.8;14.0;0.4;Room Classification
+14.165885064044955;19.40;5.8;17.0;0.4;Room Classification
+13.071742493957434;17.50;5.8;17.0;0.4;Room Classification
+13.250197530698893;25.90;5.8;17.0;0.4;Room Classification
+13.805785538059494;19.60;5.8;14.0;0.4;Room Classification
+13.535680568380162;19.80;5.8;14.0;0.4;Room Classification
+13.770585407188069;18.10;5.8;16.0;0.4;Room Classification
+14.015681950248865;15.80;5.8;15.0;0.4;Room Classification
+2.3490880971584343;20.50;5.8;15.0;0.4;Yolo V8,Room Classification
+5.830221841102065;16.90;3.2;43.0;0.5;Yolo V8,Room Classification
+6.482904671138642;17.80;3.2;22.0;0.5;Yolo V8,Room Classification
+6.405411496589657;14.10;3.2;32.0;0.5;Yolo V8,Room Classification
+6.653113431877742;27.90;3.2;34.0;0.5;Yolo V8,Room Classification
+6.170683880595262;17.50;3.2;23.0;0.5;Yolo V8,Room Classification
+6.590528661634181;13.80;3.2;34.0;0.5;Yolo V8,Room Classification
+6.558479217734149;13.40;3.2;33.0;0.5;Yolo V8,Room Classification
+6.383433183090987;15.50;3.2;24.0;0.5;Yolo V8,Room Classification
+5.926193386028403;13.70;3.2;36.0;0.5;Yolo V8,Room Classification
+6.185353315907856;17.20;3.2;32.0;0.5;Yolo V8,Room Classification
+5.626488888527493;16.70;3.2;32.0;0.5;Yolo V8,Room Classification
+6.337633388009217;22.20;3.2;35.0;0.5;Yolo V8,Room Classification
+5.925155497717827;16.40;3.2;25.0;0.5;Yolo V8,Room Classification
+6.028645616059964;15.40;3.2;37.0;0.5;Yolo V8,Room Classification
+6.275428782631513;15.70;3.2;35.0;0.5;Yolo V8,Room Classification
+5.889483234588264;14.00;3.2;37.0;0.5;Yolo V8,Room Classification
+6.230319472135842;16.40;3.2;38.0;0.5;Yolo V8,Room Classification
+5.873037302139124;14.90;3.2;26.0;0.5;Yolo V8,Room Classification
+5.878686335358305;20.80;3.2;39.0;0.5;Yolo V8,Room Classification
+5.974449073671135;18.10;3.2;36.0;0.5;Yolo V8,Room Classification
+5.941639740964072;14.40;3.2;38.0;0.5;Yolo V8,Room Classification
+6.262336411341482;14.80;3.2;42.0;0.5;Yolo V8,Room Classification
+6.311603379168245;15.00;3.2;26.0;0.5;Yolo V8,Room Classification
+6.30286790447886;16.10;3.2;38.0;0.5;Yolo V8,Room Classification
+6.145138096081949;18.00;3.2;37.0;0.5;Yolo V8,Room Classification
+5.719986285298704;13.90;3.2;28.0;0.5;Yolo V8,Room Classification
+6.2909828832130055;18.70;3.2;39.0;0.5;Yolo V8,Room Classification
+5.870690159036414;17.40;3.2;29.0;0.5;Yolo V8,Room Classification
+6.138504237443561;13.90;3.2;42.0;0.5;Yolo V8,Room Classification
+6.06928904300379;14.90;3.2;40.0;0.5;Yolo V8,Room Classification
+5.711069566244448;16.50;3.2;32.0;0.5;Yolo V8,Room Classification
+6.411529550980858;15.40;3.2;45.0;0.5;Yolo V8,Room Classification
+6.017823384707136;16.80;3.2;29.0;0.5;Yolo V8,Room Classification
+6.183333348082541;21.50;3.2;42.0;0.5;Yolo V8,Room Classification
+6.237277863303802;17.00;3.2;38.0;0.5;Yolo V8,Room Classification
+5.955331712898205;15.80;3.2;29.0;0.5;Yolo V8,Room Classification
+6.078813765671119;14.10;3.2;41.0;0.5;Yolo V8,Room Classification
+6.256127916371533;16.10;3.2;37.0;0.5;Yolo V8,Room Classification
+6.056949755344687;15.00;3.2;37.0;0.5;Yolo V8,Room Classification
+6.481249104698257;14.50;3.2;40.0;0.5;Yolo V8,Room Classification
+5.72121040581682;17.80;3.2;29.0;0.5;Yolo V8,Room Classification
+6.345465465631873;17.90;3.2;41.0;0.5;Yolo V8,Room Classification
+6.193509349595501;15.10;3.2;33.0;0.5;Yolo V8,Room Classification
+6.307355821894365;14.50;3.2;35.0;0.5;Yolo V8,Room Classification
+6.2993546563061145;15.30;3.2;36.0;0.5;Yolo V8,Room Classification
+6.350858257837896;14.80;3.2;27.0;0.5;Yolo V8,Room Classification
+5.855896963179458;15.00;3.2;37.0;0.5;Yolo V8,Room Classification
+5.95785980736727;14.60;3.2;36.0;0.5;Yolo V8,Room Classification
+14.10287255769831;18.60;3.2;29.0;0.3;Room Classification
+13.820326823310523;16.80;3.2;27.0;0.4;Room Classification
+14.336001291885493;19.80;3.2;27.0;0.4;Room Classification
+13.31528384475828;19.80;3.2;31.0;0.4;Room Classification
+13.678795134432223;16.20;3.2;26.0;0.4;Room Classification
+13.996377373611704;16.50;3.2;26.0;0.4;Room Classification
+13.508937452128169;16.70;3.2;32.0;0.4;Room Classification
+14.256269793482126;17.10;3.2;25.0;0.4;Room Classification
+13.553022037962974;17.20;3.2;25.0;0.4;Room Classification
+14.276502678193518;16.30;3.2;31.0;0.4;Room Classification
+13.77281637471105;16.00;3.2;28.0;0.4;Room Classification
+13.575013461022793;16.70;3.2;28.0;0.4;Room Classification
+13.598229379967586;17.80;3.2;33.0;0.4;Room Classification
+14.044852686493758;17.90;3.2;28.0;0.4;Room Classification
+12.597532141027829;18.00;3.2;28.0;0.4;Room Classification
+13.554437841548674;24.80;3.2;31.0;0.4;Room Classification
+13.833482907785804;17.30;3.2;28.0;0.4;Room Classification
+12.941288724798852;17.80;3.2;28.0;0.4;Room Classification
+13.011956231152203;16.80;3.2;35.0;0.4;Room Classification
+13.250780792446253;18.70;3.2;31.0;0.4;Room Classification
+13.248936372068053;14.40;3.2;31.0;0.4;Room Classification
+13.760192484184183;14.60;3.2;36.0;0.4;Room Classification
+13.753866418108187;17.30;3.2;30.0;0.4;Room Classification
+12.77398064813986;16.00;3.2;30.0;0.4;Room Classification
+12.42729627792847;17.60;3.2;36.0;0.4;Room Classification
+13.688673783250104;14.80;3.2;32.0;0.4;Room Classification
+13.634628629968528;17.50;3.2;32.0;0.4;Room Classification
+13.651573164298641;14.10;3.2;35.0;0.4;Room Classification
+12.903773092918861;18.10;3.2;30.0;0.4;Room Classification
+12.801473091031994;14.70;3.2;30.0;0.4;Room Classification
+13.116738037136166;22.70;3.2;38.0;0.4;Room Classification
+13.294046236120822;20.00;3.2;32.0;0.4;Room Classification
+13.39804661303542;20.90;3.2;32.0;0.4;Room Classification
+13.360638916586717;17.10;3.2;34.0;0.4;Room Classification
+14.089101081288197;19.40;3.2;28.0;0.4;Room Classification
+13.050967473480483;18.90;3.2;28.0;0.4;Room Classification
+13.360237110098806;15.10;3.2;38.0;0.4;Room Classification
+12.52017375600339;18.30;3.2;32.0;0.4;Room Classification
+12.446418324717003;13.90;3.2;32.0;0.4;Room Classification
+12.945223284389998;16.50;3.2;38.0;0.4;Room Classification
+12.991129656675685;21.90;3.2;31.0;0.4;Room Classification
+13.511991040689718;19.10;3.2;31.0;0.4;Room Classification
+13.958747573792534;15.70;3.2;39.0;0.4;Room Classification
+12.167094751766667;17.50;3.2;34.0;0.4;Room Classification
+13.027621776043988;16.40;3.2;34.0;0.4;Room Classification
+12.985297241383014;20.90;3.2;41.0;0.4;Room Classification
+13.11639790552208;22.50;3.2;30.0;0.4;Room Classification
+12.565318451974656;17.80;3.2;30.0;0.4;Room Classification
+12.684451747825616;15.60;3.2;37.0;0.4;Room Classification
+12.344034055423338;14.30;3.2;33.0;0.4;Room Classification
+11.889724375858476;16.40;3.2;33.0;0.4;Room Classification
+13.61603897505379;17.90;3.2;39.0;0.4;Room Classification
+13.39319269008904;18.70;3.2;33.0;0.4;Room Classification
+12.447555492532498;18.20;3.2;33.0;0.4;Room Classification
+13.490110905680169;14.80;3.2;37.0;0.4;Room Classification
+13.451032377382125;18.10;3.2;34.0;0.4;Room Classification
+11.849573222905555;18.70;3.2;34.0;0.4;Room Classification
+13.413111839889662;14.70;3.2;34.0;0.4;Room Classification
+12.976879224044598;16.20;3.2;36.0;0.4;Room Classification
+13.264757367667439;16.20;3.2;36.0;0.4;Room Classification
+12.906954334159463;16.80;3.2;37.0;0.4;Room Classification
+14.19404387828864;25.20;3.2;36.0;0.4;Room Classification
+12.578504332374699;17.80;3.2;36.0;0.4;Room Classification
+13.877532056336454;18.20;3.2;41.0;0.4;Room Classification
+13.107508267718716;18.30;3.2;35.0;0.4;Room Classification
+12.907841483998265;15.50;3.2;35.0;0.4;Room Classification
+12.608997851451425;17.60;3.2;39.0;0.4;Room Classification
+13.325898547975477;15.30;3.2;35.0;0.4;Room Classification
+12.9001522411235;15.70;3.2;35.0;0.4;Room Classification
+13.32832152903696;16.80;3.2;38.0;0.4;Room Classification
+13.599614141000401;14.90;3.2;33.0;0.4;Room Classification
+14.159668356661165;15.50;3.2;33.0;0.4;Room Classification
+12.256807924522903;16.80;3.2;36.0;0.4;Room Classification
+13.481301946548262;17.90;3.2;34.0;0.4;Room Classification
+13.061707634468334;15.70;3.2;34.0;0.4;Room Classification
+12.549403708257959;17.00;3.2;39.0;0.4;Room Classification
+12.322870595894715;21.80;3.2;34.0;0.4;Room Classification
+13.170285549370547;20.00;3.2;34.0;0.4;Room Classification
+13.329077625532294;16.80;3.2;38.0;0.4;Room Classification
+14.011163534599888;17.10;3.2;35.0;0.4;Room Classification
+12.52295583031688;16.70;3.2;35.0;0.4;Room Classification
+13.124554052323345;17.40;3.2;38.0;0.4;Room Classification
+13.037579663134837;15.50;3.2;34.0;0.4;Room Classification
+12.68075770211803;16.00;3.2;34.0;0.4;Room Classification
+13.024921089559182;20.50;3.2;38.0;0.4;Room Classification
+12.281504814081936;16.70;3.2;37.0;0.4;Room Classification
+12.727924350745276;17.10;3.2;37.0;0.4;Room Classification
+12.899260324039522;15.90;3.2;38.0;0.4;Room Classification
+12.540539331152306;16.80;3.2;39.0;0.4;Room Classification
+12.65237924574513;15.70;3.2;39.0;0.4;Room Classification
+14.012089406517724;15.60;3.2;37.0;0.4;Room Classification
+12.982126312468418;19.00;3.2;41.0;0.4;Room Classification
+11.776823679650697;19.00;3.2;41.0;0.4;Room Classification
+12.227086388078309;15.50;3.2;35.0;0.4;Room Classification
+13.684476264540892;17.30;3.2;42.0;0.4;Room Classification
+13.846902388468115;17.30;3.2;42.0;0.4;Room Classification
+13.626096001424138;19.00;3.2;33.0;0.4;Room Classification
+12.600832650404067;16.50;3.2;38.0;0.4;Room Classification
+2.156226669223641;19.10;3.3;35.0;0.4;Yolo V8,Room Classification
+6.31919698426163;14.30;3.2;26.0;0.5;Yolo V8,Room Classification
+6.290906422427445;15.60;3.2;35.0;0.5;Yolo V8,Room Classification
+6.444658949886717;17.10;3.2;34.0;0.5;Yolo V8,Room Classification
+6.547768274377692;17.40;3.2;23.0;0.5;Yolo V8,Room Classification
+6.417823311914704;15.00;3.2;34.0;0.5;Yolo V8,Room Classification
+6.521430411592053;15.40;3.2;33.0;0.5;Yolo V8,Room Classification
+6.189104204589659;16.20;3.2;25.0;0.5;Yolo V8,Room Classification
+6.179387979095804;15.60;3.2;34.0;0.5;Yolo V8,Room Classification
+5.932358254534045;15.10;3.2;36.0;0.5;Yolo V8,Room Classification
+6.3197145885465575;15.50;3.2;31.0;0.5;Yolo V8,Room Classification
+6.356115911294946;20.60;3.2;38.0;0.5;Yolo V8,Room Classification
+6.386758339058157;16.40;3.2;28.0;0.5;Yolo V8,Room Classification
+6.032489868376776;14.90;3.2;37.0;0.5;Yolo V8,Room Classification
+5.807792737145697;17.30;3.2;41.0;0.5;Yolo V8,Room Classification
+6.251755180261183;14.20;3.2;28.0;0.5;Yolo V8,Room Classification
+5.579587801123422;18.00;3.2;38.0;0.5;Yolo V8,Room Classification
+5.917326638950701;17.10;3.2;28.0;0.5;Yolo V8,Room Classification
+6.38336444158976;19.60;3.2;41.0;0.5;Yolo V8,Room Classification
+6.014854670061937;15.80;3.2;36.0;0.5;Yolo V8,Room Classification
+6.542004668083237;16.70;3.2;26.0;0.5;Yolo V8,Room Classification
+6.367639270087745;15.20;3.2;36.0;0.5;Yolo V8,Room Classification
+6.291701001012425;18.00;3.2;32.0;0.5;Yolo V8,Room Classification
+6.134942301291514;14.80;3.2;34.0;0.5;Yolo V8,Room Classification
+5.686961133415209;15.40;3.2;39.0;0.5;Yolo V8,Room Classification
+6.1424967099197;15.20;3.2;27.0;0.5;Yolo V8,Room Classification
+6.084662011562426;18.50;3.2;37.0;0.5;Yolo V8,Room Classification
+6.149040744732655;14.20;3.2;32.0;0.5;Yolo V8,Room Classification
+6.122419079702633;15.10;3.2;33.0;0.5;Yolo V8,Room Classification
+5.860997878268929;14.60;3.2;40.0;0.5;Yolo V8,Room Classification
+6.169463400618627;14.70;3.2;28.0;0.5;Yolo V8,Room Classification
+6.001560021503143;15.10;3.2;41.0;0.5;Yolo V8,Room Classification
+6.026097303972984;14.60;3.2;39.0;0.5;Yolo V8,Room Classification
+6.181135314715449;21.40;3.2;27.0;0.5;Yolo V8,Room Classification
+5.991812930603766;16.70;3.2;37.0;0.5;Yolo V8,Room Classification
+5.969528779125485;15.20;3.2;27.0;0.5;Yolo V8,Room Classification
+6.025600861933763;15.00;3.2;38.0;0.5;Yolo V8,Room Classification
+5.9930182177069495;14.90;3.2;38.0;0.5;Yolo V8,Room Classification
+6.258355804627138;15.00;3.2;28.0;0.5;Yolo V8,Room Classification
+5.9487438974508136;14.50;3.2;39.0;0.5;Yolo V8,Room Classification
+14.483334627867183;19.30;3.2;28.0;0.3;Room Classification
+14.727215591112227;17.00;3.2;28.0;0.4;Room Classification
+13.300750750319931;19.00;3.2;31.0;0.4;Room Classification
+12.480920261131686;17.30;3.2;30.0;0.4;Room Classification
+13.89034390244343;14.20;3.2;30.0;0.4;Room Classification
+13.49959670629358;16.80;3.2;32.0;0.4;Room Classification
+13.55554633164869;19.00;3.2;29.0;0.4;Room Classification
+13.09659354587465;19.40;3.2;29.0;0.4;Room Classification
+13.669832294592437;15.40;3.2;32.0;0.4;Room Classification
+13.4829047688387;17.50;3.2;30.0;0.4;Room Classification
+13.602573606887141;15.80;3.2;30.0;0.4;Room Classification
+2.049550502726447;14.30;6.3;67.0;2.1;Image Captioning,Room Classification
+2.7331765501263185;17.10;6.3;33.0;2.1;Image Captioning,Room Classification
+2.4802486022587518;16.60;6.3;18.0;2.1;Image Captioning,Room Classification
+2.3713002067125064;15.90;6.3;32.0;2.1;Image Captioning,Room Classification
+2.2564744513740562;16.40;6.3;23.0;2.1;Image Captioning,Room Classification
+2.2279980943863307;16.90;6.3;17.0;2.1;Image Captioning,Room Classification
+2.28345861483471;15.70;6.3;18.0;2.1;Image Captioning,Room Classification
+2.279208798646768;16.40;6.3;35.0;2.1;Image Captioning,Room Classification
+2.214737541311225;22.20;6.3;27.0;2.1;Image Captioning,Room Classification
+2.2135737992292053;16.00;6.3;24.0;2.1;Image Captioning,Room Classification
+2.315684166610599;16.10;6.3;18.0;2.1;Image Captioning,Room Classification
+2.2304642187317323;18.90;6.3;38.0;2.1;Image Captioning,Room Classification
+2.151984730755784;17.70;6.3;33.0;2.1;Image Captioning,Room Classification
+2.3384181308015703;16.60;6.3;29.0;2.1;Image Captioning,Room Classification
+2.314506101494156;15.80;6.3;24.0;2.1;Image Captioning,Room Classification
+2.269740505722216;16.30;6.3;18.0;2.1;Image Captioning,Room Classification
+2.2505800712613993;18.30;6.3;39.0;2.1;Image Captioning,Room Classification
+2.4332775583919384;15.70;6.3;35.0;2.1;Image Captioning,Room Classification
+2.245653475379493;15.60;6.3;22.0;2.1;Image Captioning,Room Classification
+2.2909931686124096;16.60;6.3;18.0;2.1;Image Captioning,Room Classification
+2.264871560574633;15.00;6.3;41.0;2.1;Image Captioning,Room Classification
+2.28534881795747;14.90;6.3;35.0;2.1;Image Captioning,Room Classification
+2.2864942755448636;14.70;6.3;28.0;2.1;Image Captioning,Room Classification
+2.2663814561575006;17.20;6.3;20.0;2.1;Image Captioning,Room Classification
+2.1988980319240703;16.00;6.3;19.0;2.1;Image Captioning,Room Classification
+2.2280430937290694;15.10;6.3;37.0;2.1;Image Captioning,Room Classification
+2.2526220120361256;14.40;6.3;35.0;2.1;Image Captioning,Room Classification
+2.245428990307557;18.70;6.3;27.0;2.1;Image Captioning,Room Classification
+2.2962250498735917;14.80;6.3;19.0;2.1;Image Captioning,Room Classification
+2.301394806349141;17.30;6.3;18.0;2.1;Image Captioning,Room Classification
+2.646416170159181;17.40;6.3;34.0;2.1;Image Captioning,Room Classification
+2.238732556425001;16.70;6.3;20.0;2.1;Image Captioning,Room Classification
+2.4644247472700314;15.60;6.3;17.0;2.1;Image Captioning,Room Classification
+2.3684662273866173;15.10;6.3;30.0;2.1;Image Captioning,Room Classification
+2.4863398004968085;17.00;6.3;24.0;2.1;Image Captioning,Room Classification
+14.003450534281336;15.10;5.8;16.0;0.3;Room Classification
+14.265076184924437;18.50;5.8;18.0;0.4;Room Classification
+14.60536884882983;15.00;5.8;18.0;0.4;Room Classification
+10.536387577843271;18.40;5.8;19.0;0.4;Room Classification
+12.688166621105342;15.40;5.8;17.0;0.4;Room Classification
+13.56270691765227;16.00;5.8;17.0;0.4;Room Classification
+13.701022748536932;16.80;5.8;21.0;0.4;Room Classification
+13.859406850786012;15.50;5.8;18.0;0.4;Room Classification
+12.64245374653157;15.70;5.8;18.0;0.4;Room Classification
+14.029011237741779;14.30;5.8;25.0;0.4;Room Classification
+13.741983836904737;15.00;5.8;21.0;0.4;Room Classification
+2.3856140298071007;26.70;5.8;21.0;0.4;Yolo V8,Room Classification
+6.240197780325814;15.30;3.2;39.0;0.5;Yolo V8,Room Classification
+6.3524297939115995;18.00;3.2;28.0;0.5;Yolo V8,Room Classification
+6.311188351650562;17.20;3.2;29.0;0.5;Yolo V8,Room Classification
+6.4074724045588995;14.50;3.2;31.0;0.5;Yolo V8,Room Classification
+6.253681307672291;14.40;3.2;24.0;0.5;Yolo V8,Room Classification
+6.207173181885685;15.80;3.2;30.0;0.5;Yolo V8,Room Classification
+6.227639078040607;17.40;3.2;32.0;0.5;Yolo V8,Room Classification
+6.316667570269668;15.10;3.2;29.0;0.5;Yolo V8,Room Classification
+6.121040053584899;18.80;3.2;40.0;0.5;Yolo V8,Room Classification
+6.472294263541405;15.60;3.2;30.0;0.5;Yolo V8,Room Classification
+6.177098653855756;15.30;3.2;39.0;0.5;Yolo V8,Room Classification
+6.198449970961981;16.00;3.2;40.0;0.5;Yolo V8,Room Classification
+5.851285437897244;15.80;3.2;32.0;0.5;Yolo V8,Room Classification
+6.046273790007386;20.90;3.2;42.0;0.5;Yolo V8,Room Classification
+6.425235281204847;15.70;3.2;30.0;0.5;Yolo V8,Room Classification
+6.0665849926432935;15.70;3.2;40.0;0.5;Yolo V8,Room Classification
+6.463032247279966;18.10;3.2;34.0;0.5;Yolo V8,Room Classification
+6.466180665935157;16.10;3.2;24.0;0.5;Yolo V8,Room Classification
+6.325273842293119;16.10;3.2;33.0;0.5;Yolo V8,Room Classification
+6.528414604657682;15.20;3.2;33.0;0.5;Yolo V8,Room Classification
+14.097044079526862;20.40;3.2;25.0;0.3;Room Classification
+14.162412879779712;17.30;3.2;24.0;0.4;Room Classification
+13.792855176957813;16.80;3.2;24.0;0.4;Room Classification
+13.797690942618292;15.80;3.2;29.0;0.4;Room Classification
+13.021923241095323;18.30;3.2;31.0;0.4;Room Classification
+13.277396370510319;17.60;3.2;31.0;0.4;Room Classification
+13.086845734789756;19.40;3.2;35.0;0.4;Room Classification
+13.627648383542411;20.00;3.2;30.0;0.4;Room Classification
+13.503764343130571;16.70;3.2;30.0;0.4;Room Classification
+13.377004437125278;15.70;3.2;33.0;0.4;Room Classification
+14.214943968762636;17.00;3.2;33.0;0.4;Room Classification
+13.071390681234684;16.80;3.2;33.0;0.4;Room Classification
+14.061893536849643;17.90;3.2;38.0;0.4;Room Classification
+13.703627831212838;17.60;3.2;32.0;0.4;Room Classification
+13.792638303558652;16.20;3.2;32.0;0.4;Room Classification
+12.932322531027896;18.40;3.2;36.0;0.4;Room Classification
+14.283990820105773;23.00;3.2;34.0;0.4;Room Classification
+13.615145978517436;17.80;3.2;34.0;0.4;Room Classification
+14.022251406035544;17.10;3.2;37.0;0.4;Room Classification
+13.725871102377289;19.20;3.2;35.0;0.4;Room Classification
+13.617242490052185;17.70;3.2;35.0;0.4;Room Classification
+12.581964420948536;18.10;3.2;39.0;0.4;Room Classification
+13.397346031281744;20.00;3.2;35.0;0.4;Room Classification
+2.298079962462914;18.50;3.3;35.0;0.4;Yolo V8,Room Classification
+6.517309527667847;15.50;3.2;49.0;0.5;Yolo V8,Room Classification
+6.392111500317131;16.00;3.2;29.0;0.5;Yolo V8,Room Classification
+6.7758485800226085;20.50;3.2;31.0;0.5;Yolo V8,Room Classification
+6.7002494784020055;14.50;3.2;33.0;0.5;Yolo V8,Room Classification
+6.040502754885229;15.70;3.2;27.0;0.5;Yolo V8,Room Classification
+6.238541514846226;17.50;3.2;31.0;0.5;Yolo V8,Room Classification
+6.363556269619374;15.80;3.2;30.0;0.5;Yolo V8,Room Classification
+6.56483789060759;15.70;3.2;29.0;0.5;Yolo V8,Room Classification
+5.853534887107117;16.00;3.2;37.0;0.5;Yolo V8,Room Classification
+6.471457565242676;17.20;3.2;36.0;0.5;Yolo V8,Room Classification
+6.279295937451982;19.50;3.2;34.0;0.5;Yolo V8,Room Classification
+6.192763461095442;16.00;3.2;39.0;0.5;Yolo V8,Room Classification
+5.883920556034958;17.40;3.2;31.0;0.5;Yolo V8,Room Classification
+6.215707398422399;16.80;3.2;42.0;0.5;Yolo V8,Room Classification
+6.34988576681655;16.10;3.2;40.0;0.5;Yolo V8,Room Classification
+6.136901093621625;14.60;3.2;31.0;0.5;Yolo V8,Room Classification
+6.175316761159713;17.30;3.2;40.0;0.5;Yolo V8,Room Classification
+6.050219410593484;20.90;3.2;31.0;0.5;Yolo V8,Room Classification
+6.076395334498806;16.30;3.2;40.0;0.5;Yolo V8,Room Classification
+6.339021132025379;16.60;3.2;40.0;0.5;Yolo V8,Room Classification
+6.463934664021704;20.40;3.2;30.0;0.5;Yolo V8,Room Classification
+5.9738110037097245;15.60;3.2;38.0;0.5;Yolo V8,Room Classification
+6.29176022150183;16.10;3.2;38.0;0.5;Yolo V8,Room Classification
+6.18740205343502;18.20;3.2;35.0;0.5;Yolo V8,Room Classification
+6.368000522285288;18.50;3.2;42.0;0.5;Yolo V8,Room Classification
+13.923947066935431;16.50;3.2;30.0;0.3;Room Classification
+13.194482342007737;18.10;3.2;32.0;0.4;Room Classification
+14.084509025983529;17.40;3.2;32.0;0.4;Room Classification
+13.740591456335803;17.50;3.2;32.0;0.4;Room Classification
+13.531387928446648;16.00;3.2;30.0;0.4;Room Classification
+13.613801236182015;17.90;3.2;30.0;0.4;Room Classification
+13.943622837392772;16.50;3.2;32.0;0.4;Room Classification
+14.206646585354035;17.20;3.2;32.0;0.4;Room Classification
+14.273595595307693;19.00;3.2;30.0;0.4;Room Classification
+12.121874783577178;18.90;3.2;31.0;0.4;Room Classification
+13.15452475536086;19.80;3.2;31.0;0.4;Room Classification
+13.773042679097056;19.40;3.2;29.0;0.4;Room Classification
+13.67995680842842;18.30;3.2;35.0;0.4;Room Classification
+13.547367102349178;26.10;3.2;35.0;0.4;Room Classification
+14.227448817940438;17.90;3.2;33.0;0.4;Room Classification
+13.81847989529253;18.60;3.2;33.0;0.4;Room Classification
+13.654649446482056;16.70;3.2;33.0;0.4;Room Classification
+12.378329837259782;18.90;3.2;33.0;0.4;Room Classification
+13.39845913436873;18.70;3.2;32.0;0.4;Room Classification
+13.788982349508457;14.90;3.2;32.0;0.4;Room Classification
+13.257484612299097;19.60;3.2;35.0;0.4;Room Classification
+13.467048193570214;17.90;3.2;32.0;0.4;Room Classification
+13.368058737487589;18.70;3.2;32.0;0.4;Room Classification
+13.85143499353993;18.10;3.2;35.0;0.4;Room Classification
+2.257985853003152;20.60;3.3;32.0;0.4;Fast SAM,Room Classification
+6.796689881524762;17.50;3.2;21.0;0.5;Fast SAM,Room Classification
+6.454248735137765;15.50;3.2;30.0;0.5;Fast SAM,Room Classification
+6.624537478935253;16.40;3.2;30.0;0.5;Fast SAM,Room Classification
+6.31502235134686;17.20;3.2;22.0;0.5;Fast SAM,Room Classification
+6.7007651630452525;16.70;3.2;31.0;0.5;Fast SAM,Room Classification
+6.492195027943481;17.70;3.2;27.0;0.5;Fast SAM,Room Classification
+6.077163125798567;15.70;3.2;25.0;0.5;Fast SAM,Room Classification
+5.98568566370999;15.40;3.2;37.0;0.5;Fast SAM,Room Classification
+6.133110879670892;20.20;3.2;29.0;0.5;Fast SAM,Room Classification
+5.810751190152719;14.10;3.2;40.0;0.5;Fast SAM,Room Classification
+6.18027869236821;16.30;3.2;38.0;0.5;Fast SAM,Room Classification
+6.005630482744784;16.50;3.2;34.0;0.5;Fast SAM,Room Classification
+6.340549827989342;14.80;3.2;40.0;0.5;Fast SAM,Room Classification
+6.233391168184047;15.70;3.2;29.0;0.5;Fast SAM,Room Classification
+6.387525785548884;17.70;3.2;40.0;0.5;Fast SAM,Room Classification
+5.960543242236224;19.80;3.2;38.0;0.5;Fast SAM,Room Classification
+6.335901278364143;20.30;3.2;31.0;0.5;Fast SAM,Room Classification
+5.9439703404910995;17.40;3.2;39.0;0.5;Fast SAM,Room Classification
+5.934523511914503;15.90;3.2;30.0;0.5;Fast SAM,Room Classification
+6.2551725194487755;14.60;3.2;42.0;0.5;Fast SAM,Room Classification
+6.088703100655215;16.90;3.2;40.0;0.5;Fast SAM,Room Classification
+5.819039362606022;18.50;3.2;32.0;0.5;Fast SAM,Room Classification
+6.343919467714319;15.90;3.2;39.0;0.5;Fast SAM,Room Classification
+5.842074483727953;20.80;3.2;31.0;0.5;Fast SAM,Room Classification
+5.926150926518925;15.30;3.2;41.0;0.5;Fast SAM,Room Classification
+6.0136081819196034;15.60;3.2;29.0;0.5;Fast SAM,Room Classification
+5.914665734255434;15.40;3.2;39.0;0.5;Fast SAM,Room Classification
+6.469496009284638;15.90;3.2;41.0;0.5;Fast SAM,Room Classification
+5.872641285172807;14.60;3.2;30.0;0.5;Fast SAM,Room Classification
+5.981878771613791;14.50;3.2;39.0;0.5;Fast SAM,Room Classification
+6.027434567610468;19.60;3.2;32.0;0.5;Fast SAM,Room Classification
+5.969013395030507;15.00;3.2;41.0;0.5;Fast SAM,Room Classification
+5.904350536861718;16.20;3.2;36.0;0.5;Fast SAM,Room Classification
+5.866702958858114;18.50;3.2;37.0;0.5;Fast SAM,Room Classification
+6.492817917495328;15.80;3.2;38.0;0.5;Fast SAM,Room Classification
+6.266231340716629;16.80;3.2;30.0;0.5;Fast SAM,Room Classification
+6.4256011577286;15.20;3.2;38.0;0.5;Fast SAM,Room Classification
+6.102699634727945;20.60;3.2;35.0;0.5;Fast SAM,Room Classification
+5.751454240844187;15.30;3.2;35.0;0.5;Fast SAM,Room Classification
+6.160935969365056;15.20;3.2;36.0;0.5;Fast SAM,Room Classification
+5.812034638401613;16.40;3.2;29.0;0.5;Fast SAM,Room Classification
+6.219231092702073;15.60;3.2;41.0;0.5;Fast SAM,Room Classification
+6.11444620520958;15.60;3.2;29.0;0.5;Fast SAM,Room Classification
+5.9069008396879115;14.90;3.2;39.0;0.5;Fast SAM,Room Classification
+6.266194902428713;28.30;3.2;38.0;0.5;Fast SAM,Room Classification
+6.1308563480383835;16.90;3.2;38.0;0.5;Fast SAM,Room Classification
+6.453867676425872;16.40;3.2;39.0;0.5;Fast SAM,Room Classification
+6.271608080915022;14.90;3.2;28.0;0.5;Fast SAM,Room Classification
+6.2282925708598595;15.70;3.2;37.0;0.5;Fast SAM,Room Classification
+6.015085497562249;14.70;3.2;36.0;0.5;Fast SAM,Room Classification
+6.492391109170157;15.50;3.2;34.0;0.5;Fast SAM,Room Classification
+6.036840701743559;14.30;3.2;39.0;0.5;Fast SAM,Room Classification
+6.484409498545815;20.60;3.2;30.0;0.5;Fast SAM,Room Classification
+5.982283467509115;16.30;3.2;38.0;0.5;Fast SAM,Room Classification
+6.311637519077055;14.90;3.2;41.0;0.5;Fast SAM,Room Classification
+6.325552797962268;15.50;3.2;30.0;0.5;Fast SAM,Room Classification
+6.267049743833626;15.50;3.2;40.0;0.5;Fast SAM,Room Classification
+6.229015769559487;15.50;3.2;37.0;0.5;Fast SAM,Room Classification
+6.051821603141967;15.00;3.2;37.0;0.5;Fast SAM,Room Classification
+6.237445036723475;18.10;3.2;41.0;0.5;Fast SAM,Room Classification
+5.929830407406514;15.10;3.2;28.0;0.5;Fast SAM,Room Classification
+6.159681362168409;15.00;3.2;41.0;0.5;Fast SAM,Room Classification
+6.365489675935145;15.50;3.2;36.0;0.5;Fast SAM,Room Classification
+6.1487575178302585;14.60;3.2;34.0;0.5;Fast SAM,Room Classification
+6.1668370039451;14.90;3.2;38.0;0.5;Fast SAM,Room Classification
+6.215455160602802;15.30;3.2;28.0;0.5;Fast SAM,Room Classification
+6.059612210743997;15.60;3.2;39.0;0.5;Fast SAM,Room Classification
+6.017103170517945;20.40;3.2;38.0;0.5;Fast SAM,Room Classification
+6.341855755875077;14.70;3.2;30.0;0.5;Fast SAM,Room Classification
+6.310670151773422;16.50;3.2;37.0;0.5;Fast SAM,Room Classification
+6.250304116364556;16.00;3.2;35.0;0.5;Fast SAM,Room Classification
+6.237031185117818;18.10;3.2;39.0;0.5;Fast SAM,Room Classification
+6.232635449144476;15.00;3.2;40.0;0.5;Fast SAM,Room Classification
+6.233889486655888;16.10;3.2;29.0;0.5;Fast SAM,Room Classification
+6.2721531272284565;20.80;3.2;40.0;0.5;Fast SAM,Room Classification
+6.133417984310809;17.10;3.2;37.0;0.5;Fast SAM,Room Classification
+5.857367135731555;15.60;3.2;34.0;0.5;Fast SAM,Room Classification
+6.126603954867727;15.30;3.2;41.0;0.5;Fast SAM,Room Classification
+6.054362251827284;15.80;3.2;28.0;0.5;Fast SAM,Room Classification
+5.864780575134481;14.90;3.2;41.0;0.5;Fast SAM,Room Classification
+14.38166257485005;15.60;3.2;29.0;0.3;Room Classification
+14.005536921058454;19.00;3.2;29.0;0.4;Room Classification
+12.739555882788725;24.80;3.2;31.0;0.4;Room Classification
+13.279239201611425;15.70;3.2;30.0;0.4;Room Classification
+12.918037378142868;17.10;3.2;30.0;0.4;Room Classification
+12.60153243709577;17.10;3.2;33.0;0.4;Room Classification
+13.702565964398733;17.40;3.2;29.0;0.4;Room Classification
+13.552090638428545;17.10;3.2;29.0;0.4;Room Classification
+13.898943230032845;16.30;3.2;31.0;0.4;Room Classification
+14.41975746718834;16.50;3.2;29.0;0.4;Room Classification
+12.939753813199136;18.30;3.2;29.0;0.4;Room Classification
+13.78564284851087;13.60;3.2;31.0;0.4;Room Classification
+13.59276077831802;16.80;3.2;31.0;0.4;Room Classification
+14.19727681182192;15.70;3.2;31.0;0.4;Room Classification
+13.420241204979382;16.50;3.2;34.0;0.4;Room Classification
+13.828001127080721;18.10;3.2;31.0;0.4;Room Classification
+13.609335002176833;18.60;3.2;31.0;0.4;Room Classification
+13.28885641683066;23.60;3.2;34.0;0.4;Room Classification
+12.770480859862234;21.40;3.2;31.0;0.4;Room Classification
+13.078855256454125;17.80;3.2;31.0;0.4;Room Classification
+13.475919703867534;19.30;3.2;37.0;0.4;Room Classification
+13.613583099726164;15.70;3.2;34.0;0.4;Room Classification
+13.453287870610596;16.20;3.2;34.0;0.4;Room Classification
+13.729805447056277;20.70;3.2;37.0;0.4;Room Classification
+13.654816320796305;18.90;3.2;32.0;0.4;Room Classification
+14.02357815055207;19.30;3.2;32.0;0.4;Room Classification
+13.16465998629642;16.80;3.2;38.0;0.4;Room Classification
+13.182924948303874;16.30;3.2;33.0;0.4;Room Classification
+13.162221124288633;16.50;3.2;33.0;0.4;Room Classification
+13.452979649961781;17.60;3.2;37.0;0.4;Room Classification
+13.690840611246884;17.90;3.2;35.0;0.4;Room Classification
+12.88718550084493;15.50;3.2;35.0;0.4;Room Classification
+12.714967505395457;15.10;3.2;38.0;0.4;Room Classification
+14.222976330868494;24.60;3.2;35.0;0.4;Room Classification
+13.059991882372856;18.40;3.2;35.0;0.4;Room Classification
+13.52581999912408;16.80;3.2;37.0;0.4;Room Classification
+13.784491088541241;16.50;3.2;33.0;0.4;Room Classification
+14.373955588488245;20.50;3.2;33.0;0.4;Room Classification
+13.610767227543821;15.30;3.2;38.0;0.4;Room Classification
+13.417026058615084;17.00;3.2;38.0;0.4;Room Classification
+12.942673404974135;17.00;3.2;33.0;0.4;Room Classification
+13.284618636732683;19.10;3.2;37.0;0.4;Room Classification
+13.576940023419414;20.00;3.2;37.0;0.4;Room Classification
+13.610661634099147;15.70;3.2;33.0;0.4;Room Classification
+12.672333117219944;18.90;3.2;39.0;0.4;Room Classification
+13.747054985611491;16.00;3.2;39.0;0.4;Room Classification
+13.910411193015493;17.50;3.2;35.0;0.4;Room Classification
+13.069485343308427;16.70;3.2;37.0;0.4;Room Classification
+12.240951176729746;16.20;3.2;37.0;0.4;Room Classification
+12.700858682195888;25.00;3.2;35.0;0.4;Room Classification
+12.970924997016239;18.20;3.2;38.0;0.4;Room Classification
+13.79900618723399;15.90;3.2;35.0;0.4;Room Classification
+12.103164176201577;14.80;3.2;35.0;0.4;Room Classification
+12.204490981765305;16.10;3.2;40.0;0.4;Room Classification
+13.628800086009688;20.70;3.2;38.0;0.4;Room Classification
+11.209762878496553;18.30;3.2;38.0;0.4;Room Classification
+11.860940389591397;16.50;3.2;39.0;0.4;Room Classification
+13.52954437801473;15.90;3.2;36.0;0.4;Room Classification
+13.402708612373575;16.00;3.2;36.0;0.4;Room Classification
+12.837880497699084;17.80;3.2;40.0;0.4;Room Classification
+13.471564336556447;17.30;3.2;37.0;0.4;Room Classification
+14.422303596421933;16.30;3.2;37.0;0.4;Room Classification
+13.357507750926372;15.80;3.2;40.0;0.4;Room Classification
+13.131665961788448;18.70;3.2;36.0;0.4;Room Classification
+13.194824446248129;28.00;3.2;36.0;0.4;Room Classification
+12.738851718129169;16.30;3.2;40.0;0.4;Room Classification
+12.964737715446901;16.50;3.2;36.0;0.4;Room Classification
+11.742081791761237;14.60;3.2;36.0;0.4;Room Classification
+13.107715298226458;16.10;3.2;37.0;0.4;Room Classification
+12.842754000732079;16.20;3.2;40.0;0.4;Room Classification
+13.295015680110916;16.70;3.2;40.0;0.4;Room Classification
+12.80667635609048;18.10;3.2;33.0;0.4;Room Classification
+13.884344465791077;17.30;3.2;42.0;0.4;Room Classification
+14.333255852543276;15.00;3.2;42.0;0.4;Room Classification
+12.722729671785888;16.80;3.2;35.0;0.4;Room Classification
+13.094587746280029;19.60;3.2;39.0;0.4;Room Classification
+12.683519588926037;16.80;3.2;39.0;0.4;Room Classification
+12.981764476530792;15.90;3.2;36.0;0.4;Room Classification
+12.173143192751947;18.50;3.2;38.0;0.4;Room Classification
+13.505180999308408;23.00;3.2;34.0;0.4;Room Classification
+13.517160041397727;17.60;3.2;34.0;0.4;Room Classification
+13.599264225540798;15.40;3.2;39.0;0.4;Room Classification
+13.499230415514894;17.30;3.2;39.0;0.4;Room Classification
+13.513876744738285;18.10;3.2;37.0;0.4;Room Classification
+12.722944797950495;19.40;3.2;37.0;0.4;Room Classification
+13.843235819799013;15.70;3.2;37.0;0.4;Room Classification
+12.627223060474421;15.70;3.2;34.0;0.4;Room Classification
+12.341029491423019;16.40;3.2;39.0;0.4;Room Classification
+13.081361542671168;17.40;3.2;36.0;0.4;Room Classification
+12.829493136698481;15.90;3.2;36.0;0.4;Room Classification
+12.560622273393207;17.00;3.2;39.0;0.4;Room Classification
+12.276311034734407;21.60;3.2;37.0;0.4;Room Classification
+13.646328805926853;18.20;3.2;37.0;0.4;Room Classification
+13.783683773822204;18.10;3.2;40.0;0.4;Room Classification
+13.38026398483303;24.80;3.2;35.0;0.4;Room Classification
+13.428408434586428;18.90;3.2;35.0;0.4;Room Classification
+12.446520568399999;17.90;3.2;41.0;0.4;Room Classification
+13.365320822888318;18.00;3.2;37.0;0.4;Room Classification
+13.125662599865748;18.70;3.2;37.0;0.4;Room Classification
+13.222993972029201;20.90;3.2;41.0;0.4;Room Classification
+13.925381705576736;16.80;3.2;35.0;0.4;Room Classification
+13.255034606722916;18.70;3.2;35.0;0.4;Room Classification
+12.57380604102175;16.50;3.2;38.0;0.4;Room Classification
+12.501657876136498;15.70;3.2;37.0;0.4;Room Classification
+13.110973839223872;16.00;3.2;37.0;0.4;Room Classification
+13.391079596688945;17.00;3.2;41.0;0.4;Room Classification
+13.37352630764925;17.30;3.2;35.0;0.4;Room Classification
+12.177319452706989;18.90;3.2;35.0;0.4;Room Classification
+13.531378773460169;18.30;3.2;41.0;0.4;Room Classification
+12.996623737034335;22.70;3.2;36.0;0.4;Room Classification
+12.432561898998761;18.90;3.2;36.0;0.4;Room Classification
+13.17672931103988;16.40;3.2;36.0;0.4;Room Classification
+12.561134570802738;18.90;3.2;35.0;0.4;Room Classification
+12.836580928290047;16.20;3.2;35.0;0.4;Room Classification
+2.1822427637312654;20.00;3.3;39.0;0.4;Yolo V8,Room Classification
+6.356077086918819;14.70;3.2;56.0;0.5;Yolo V8,Room Classification
+5.987157857743548;14.80;3.2;33.0;0.5;Yolo V8,Room Classification
+6.113134895003298;16.10;3.2;37.0;0.5;Yolo V8,Room Classification
+6.492074232326606;19.60;3.2;37.0;0.5;Yolo V8,Room Classification
+5.981481286073885;17.50;3.2;30.0;0.5;Yolo V8,Room Classification
+6.322702903390642;18.50;3.2;39.0;0.5;Yolo V8,Room Classification
+6.104293825574243;15.90;3.2;35.0;0.5;Yolo V8,Room Classification
+6.083778583282361;18.40;3.2;34.0;0.5;Yolo V8,Room Classification
+6.14145002437168;16.10;3.2;39.0;0.5;Yolo V8,Room Classification
+5.791168472720195;15.80;3.2;30.0;0.5;Yolo V8,Room Classification
+6.114774513288729;13.80;3.2;41.0;0.5;Yolo V8,Room Classification
+6.005175849048717;19.70;3.2;34.0;0.5;Yolo V8,Room Classification
+6.187413576923678;15.90;3.2;38.0;0.5;Yolo V8,Room Classification
+6.23092957798136;14.60;3.2;39.0;0.5;Yolo V8,Room Classification

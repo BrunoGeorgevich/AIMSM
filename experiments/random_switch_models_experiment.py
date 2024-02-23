@@ -37,14 +37,14 @@ for _ in tqdm(range(rounds)):
 
     mc.process_models()
 
-    mc.log_data()
-    mc.register_log()
-
     i_t = perf_counter_ns()
     mc.toggle_ai_model(model_name)
     e_t = perf_counter_ns()
     deinitiate_time = (e_t - i_t) / (10**9)
     times["deinitiate"].append(deinitiate_time)
+
+    mc.log_data()
+    mc.register_log()
 
 initiate_time_mean = np.mean(times["initiate"])
 deinitiate_time_mean = np.mean(times["deinitiate"])

@@ -21,7 +21,7 @@ for model_name in models:
     mc.toggle_ai_model(model_name)
 
     for _ in tqdm(range(rounds)):
-        mc.log_data()
         mc.process_models()
+        mc.log_data()
 
     mc.toggle_ai_model(model_name)
