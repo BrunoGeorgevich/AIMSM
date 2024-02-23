@@ -50,7 +50,7 @@ ApplicationWindow {
             height: root_window.height * 0.45 - 30
             Item {
                 id: camerasItem
-                width: root_window.width * 0.8
+                width: root_window.width * 1
                 height: root_window.height * 0.45 - 30
 
                 Row {
@@ -87,6 +87,7 @@ ApplicationWindow {
             Item {
                 width: root_window.width * 0.2
                 height: root_window.height * 0.45 - 30
+                visible: false
 
                 Label {
                     id: statesTitleLabel
