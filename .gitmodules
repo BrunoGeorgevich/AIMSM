@@ -1,0 +1,3 @@
+[submodule "fastsam"]
+	path = fastsam
+	url = git@github.com:CASIA-IVA-Lab/FastSAM.git
