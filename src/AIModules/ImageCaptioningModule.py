@@ -4,6 +4,9 @@ from typing import Any
 import numpy as np
 import torch
 import gc
+import os
+
+from transformers import BlipProcessor, BlipForConditionalGeneration
 
 from src.AIModules.AIModule import AIModule, ModuleOutput
 
@@ -29,7 +32,22 @@ class ImageCaptioningModule(AIModule):
         :param model_path: A string representing the model card name to the Image Captioning model file.
         :type model_path: str
         :return: None"""
-        self.__model = pipeline("image-to-text", model_path, device=self.__device)
+        os.environ["CUDA_LAUNCH_BLOCKING"] = "1"
+        processor = BlipProcessor.from_pretrained(
+            "Salesforce/blip-image-captioning-large",
+        )
+        model = BlipForConditionalGeneration.from_pretrained(
+            "Salesforce/blip-image-captioning-large",
+            torch_dtype=torch.float16,
+        ).to(self.__device)
+        self.__model = pipeline(
+            "image-to-text",
+            model=model,
+            image_processor=processor,
+            tokenizer=processor.tokenizer,
+            device=self.__device,
+            torch_dtype=torch.float16,
+        )
         self.__initialized = True
 
     @torch.no_grad()

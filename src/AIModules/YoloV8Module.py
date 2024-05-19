@@ -25,7 +25,7 @@ class YoloV8Module(AIModule):
         self.__colors = {}
 
     @torch.no_grad()
-    def initiate(self, model_path: str = "YoloV8.pt") -> None:
+    def initiate(self, model_path: str = "yolov8n.pt") -> None:
         """
         The `initiate` function initializes a YOLO object with a specified model path.
 
@@ -35,6 +35,8 @@ class YoloV8Module(AIModule):
         :type model_path: str (optional)
         """
         self.__model = YOLO(model_path)
+        self.__model.fuse()
+        self.__model.model = self.__model.model.half()
         self.__initialized = True
 
     @torch.no_grad()

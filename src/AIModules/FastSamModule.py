@@ -27,6 +27,8 @@ class FastSamModule(AIModule):
         :type model_path: str
         :return: None"""
         self.__model = FastSAM(model_path)
+        self.__model.fuse()
+        self.__model.model = self.__model.model.half()
         self.__initialized = True
 
     def deinitiate(self) -> None:

@@ -26,7 +26,7 @@ class RoomClassificationModule(AIModule):
         :type model_path: str
         :return: None"""
         self.__model = pipeline(
-            "image-classification", model_path, device=self.__device
+            "image-classification", model_path, device=self.__device, torch_dtype=torch.float16
         )
         self.__initialized = True
 
