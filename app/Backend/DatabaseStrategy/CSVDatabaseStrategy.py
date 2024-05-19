@@ -1,5 +1,6 @@
 from app.Backend.DatabaseStrategy.DatabaseStrategy import DatabaseStrategy
 
+import time
 import os
 
 
@@ -18,7 +19,7 @@ class CSVDatabaseStrategy(DatabaseStrategy):
             self.__database = open(self.__database_path, "a")
         else:
             self.__database = open(self.__database_path, "w")
-            self.__database.write("FPS;CPU;RAM;GPU;VRAM;Running Models\n")
+            self.__database.write("Timestamp;FPS;CPU;RAM;GPU;VRAM;Running Models\n")
 
     def close(self):
         if self.__database:
@@ -38,7 +39,8 @@ class CSVDatabaseStrategy(DatabaseStrategy):
             raise ValueError("Pass the 'models' parameter to the data dict")
 
         if self.__database:
-            self.__database.write(f"{rs.to_csv()};{','.join(models)}\n")
+            current_time = time.time()
+            self.__database.write(f"{current_time};{rs.to_csv()};{','.join(models)}\n")
         else:
             raise ValueError("Database is not open")
 
