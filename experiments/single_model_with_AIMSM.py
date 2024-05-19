@@ -1,9 +1,8 @@
 from tqdm import tqdm
-from glob import glob
 import threading
 import traceback
 import time
-import numpy as np
+import cv2
 import sys
 import os
 
@@ -11,7 +10,6 @@ os.chdir("..")
 sys.path.append(os.getcwd())
 
 from app.Backend.MainController import MainController
-
 
 KILL_THREAD = False
 CURRENT_RUNNING_MODEL = ""
@@ -25,6 +23,15 @@ mc = MainController(database_path=database_path, bypass_ros=True)
 
 models = ["Yolo V8", "Fast SAM", "Image Captioning", "Room Classification"]
 rounds = 50
+
+image = cv2.imread(os.path.join("assets", "image.png"))
+image = cv2.resize(image, (512, 512))
+
+input_data = {
+    "image": image,
+}
+
+mc.set_input_data(input_data)
 
 
 def log_data_thread():

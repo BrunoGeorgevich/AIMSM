@@ -20,14 +20,6 @@ import time
 KILL_THREAD = False
 CURRENT_RUNNING_MODEL = ""
 
-database_path = os.path.join("labs", "context_switching_experiment.csv")
-
-if os.path.exists(database_path):
-    os.remove(database_path)
-
-mc = MainController(database_path=database_path)
-script = open("script.txt", "r").read().split("\n")
-
 def log_data_thread():
     global KILL_THREAD, CURRENT_RUNNING_MODEL
     while not KILL_THREAD:
@@ -35,6 +27,13 @@ def log_data_thread():
         mc.register_log([CURRENT_RUNNING_MODEL])
         time.sleep(1 / 300)
 
+database_path = os.path.join("labs", "context_switching_experiment.csv")
+
+if os.path.exists(database_path):
+    os.remove(database_path)
+
+mc = MainController(database_path=database_path)
+script = open("script.txt", "r").read().split("\n")
 
 log_thread = threading.Thread(target=log_data_thread)
 log_thread.start()

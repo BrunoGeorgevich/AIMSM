@@ -1,9 +1,9 @@
 from tqdm import tqdm
-import numpy as np
 import threading
 import traceback
 import time
 import sys
+import cv2
 import os
 
 os.chdir("..")
@@ -41,8 +41,11 @@ models = [
     ("Room Classification", RoomClassificationModule())
 ]
 
+image = cv2.imread(os.path.join("assets", "image.png"))
+image = cv2.resize(image, (512, 512))
+
 input_data = {
-    "image": np.zeros((512, 512, 3), dtype=np.uint8),
+    "image": image,
 }
 
 rounds = 50
