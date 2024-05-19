@@ -55,7 +55,7 @@ if __name__ == "__main__":
     # ]
     DATABASE_NAMES = [
         "random_switch_models_experiment.csv",
-        "context_switching_experiment_database.csv",
+        "context_switching_experiment.csv",
     ]
     # DATABASE_NAME = "random_switch_models_experiment.csv"
     # DATABASE_NAME = "context_switching_experiment_database.csv"
