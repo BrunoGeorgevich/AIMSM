@@ -102,8 +102,8 @@ class MainController(QObject):
 
         self.image_provider = ImageProvider(self.__image_provider_handler)
         self.__input_data = {
-            "depth": np.zeros((480, 640), dtype=np.uint8),
-            "image": np.ones((480, 640, 3), dtype=np.uint8),
+            "depth": np.zeros((512, 512), dtype=np.uint8),
+            "image": np.ones((512, 512, 3), dtype=np.uint8),
         }
         self.__results_data = {}
         self.__output_data = {}
@@ -127,8 +127,8 @@ class MainController(QObject):
         self.__aimsm = AIMSM()
         self.__aimsm.add_model("Yolo V8", YoloV8Module())
         self.__aimsm.add_model("Fast SAM", FastSamModule())
-        self.__aimsm.add_model("Image Captioning", ImageCaptioningModule())
         self.__aimsm.add_model("Room Classification", RoomClassificationModule())
+        self.__aimsm.add_model("Image Captioning", ImageCaptioningModule())
 
         self.__cssm = CSSM()
         self.__cssm.add_state("Idle")
@@ -158,7 +158,8 @@ class MainController(QObject):
 
     @Slot(str, result=bool)
     def is_ai_model_running(self, ai_model_name: str) -> bool:
-        return self.__aimsm.is_model_initialized(ai_model_name)
+        return self.__aimsm.is_model_activated(ai_model_name)
+
 
     @Slot()
     def process_models(self):
@@ -185,8 +186,13 @@ class MainController(QObject):
     def set_input_data(self, input_data):
         self.__input_data = input_data
 
-    def register_log(self):
-        running_models = self.__aimsm.initialized_models()
+    def register_log(self, running_models=None):
+        if running_models is None:
+            running_models = self.__aimsm.activated_models()
+
+        if len(running_models) == 1 and running_models[0] == "":
+            self.__resources_state.fps_count = 0
+
         self.__log_controller.write_to_database(
             {"rs": self.__resources_state, "models": running_models}
         )
@@ -263,12 +269,12 @@ class MainController(QObject):
         elif method == "depth":
             return toQImage(self.__input_data["depth"])
         elif method == "Yolo V8":
-            if self.__aimsm.is_model_initialized("Yolo V8"):
+            if self.__aimsm.is_model_activated("Yolo V8"):
                 return toQImage(self.__output_data["Yolo V8"])
             else:
                 return toQImage(np.zeros((480, 640, 3), dtype=np.uint8))
         elif method == "Fast SAM":
-            if self.__aimsm.is_model_initialized("Fast SAM"):
+            if self.__aimsm.is_model_activated("Fast SAM"):
                 return toQImage(self.__output_data["Fast SAM"])
             else:
                 return toQImage(np.zeros((480, 640, 3), dtype=np.uint8))

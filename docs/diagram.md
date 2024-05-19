@@ -34,9 +34,9 @@ classDiagram
 
   class AIMSM {
     +add_model(name: str, model: AIModule)
-    +initiate_model(name: str)
+    +activate_model(name: str)
     +disable_model(name: str)
-    +is_model_initialized(name: str)
+    +is_model_activated(name: str)
     +toggle_model(name: str)
     +get_model_names()
     +get_model_output_type(name: str)

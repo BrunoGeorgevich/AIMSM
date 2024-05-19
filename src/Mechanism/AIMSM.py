@@ -13,22 +13,22 @@ class AIMSM:
             raise ValueError("Model is already initialized")
         self.__models[name] = model
 
-    def initiate_model(self, name):
+    def activate_model(self, name):
         if name not in self.__models:
             raise ValueError("Model not found")
         self.__models[name].initiate()
 
-    def deinitiate_model(self, name):
+    def deactivate_model(self, name):
         if name not in self.__models:
             raise ValueError("Model not found")
         self.__models[name].deinitiate()
 
-    def is_model_initialized(self, name):
+    def is_model_activated(self, name):
         if name not in self.__models:
             raise ValueError("Model not found")
         return self.__models[name].is_initialized()
 
-    def initialized_models(self):
+    def activated_models(self):
         return [name for name, model in self.__models.items() if model.is_initialized()]
 
     def toggle_model(self, name: str | list):
@@ -95,6 +95,11 @@ class AIMSM:
         if name not in self.__models:
             raise ValueError("Model not found")
         return self.__models[name].get_output_type()
+
+    def process_model(self, name, input_data):
+        if name not in self.__models:
+            raise ValueError("Model not found")
+        return self.__models[name].process(input_data)
 
     def process(self, input_data: dict) -> dict:
         def process_thread(results, name, model, input_data):
