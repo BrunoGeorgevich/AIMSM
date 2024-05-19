@@ -16,12 +16,12 @@ from app.Backend.MainController import MainController
 KILL_THREAD = False
 CURRENT_RUNNING_MODEL = ""
 
-database_path = os.path.join("labs", "run_individual_models_experiment.csv")
+database_path = os.path.join("labs", "single_model_with_AIMSM.csv")
 
 if os.path.exists(database_path):
     os.remove(database_path)
 
-mc = MainController(database_path=database_path)
+mc = MainController(database_path=database_path, bypass_ros=True)
 
 models = ["Yolo V8", "Fast SAM", "Image Captioning", "Room Classification"]
 rounds = 50

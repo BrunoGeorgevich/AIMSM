@@ -20,7 +20,7 @@ import time
 KILL_THREAD = False
 CURRENT_RUNNING_MODEL = ""
 
-database_path = os.path.join("labs", "context_switching_experiment_database.csv")
+database_path = os.path.join("labs", "context_switching_experiment.csv")
 
 if os.path.exists(database_path):
     os.remove(database_path)
