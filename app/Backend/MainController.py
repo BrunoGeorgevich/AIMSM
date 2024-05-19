@@ -6,17 +6,15 @@ from src.AIModules.YoloV8Module import YoloV8Module
 from app.Backend.LogController import LogController
 from app.Backend.Base import ImageProvider
 from src.Mechanism.AIMSM import AIMSM
-from src.Mechanism.CSSM import CSSM
+# from src.Mechanism.CSSM import CSSM
 
 from PySide2.QtCore import QObject, Slot, Signal
-from sensor_msgs.msg import CompressedImage
 from dataclasses import dataclass
 from PySide2.QtGui import QImage
 from collections import deque
 from time import perf_counter
 import numpy as np
 import psutil
-import rospy
 import torch
 import cv2
 import os
@@ -97,7 +95,7 @@ class MainController(QObject):
     fpsCounterUpdated = Signal()
     stateSwitched = Signal()
 
-    def __init__(self, database_path="database.csv") -> None:
+    def __init__(self, database_path="database.csv", do_not_add_models=False, bypass_ros=False) -> None:
         super().__init__()
 
         self.image_provider = ImageProvider(self.__image_provider_handler)
@@ -109,42 +107,46 @@ class MainController(QObject):
         self.__output_data = {}
         self.fps_counter = "-"
 
-        rospy.init_node("MainControllerNode")
-        rospy.Subscriber(
-            "/RobotAtVirtualHome/VirtualCameraRGB",
-            CompressedImage,
-            self.__rgb_callback,
-        )
-        rospy.Subscriber(
-            "/RobotAtVirtualHome/VirtualCameraDepth",
-            CompressedImage,
-            self.__depth_callback,
-        )
+        if not bypass_ros:
+            from sensor_msgs.msg import CompressedImage
+            import rospy
+            rospy.init_node("MainControllerNode")
+            rospy.Subscriber(
+                "/RobotAtVirtualHome/VirtualCameraRGB",
+                CompressedImage,
+                self.__rgb_callback,
+            )
+            rospy.Subscriber(
+                "/RobotAtVirtualHome/VirtualCameraDepth",
+                CompressedImage,
+                self.__depth_callback,
+            )
 
         self.__resources_state = ResourcesState(0, 0, 0, 0, 0)
         self.__resource_monitor = ResourceMonitor()
 
         self.__aimsm = AIMSM()
-        self.__aimsm.add_model("Yolo V8", YoloV8Module())
-        self.__aimsm.add_model("Fast SAM", FastSamModule())
-        self.__aimsm.add_model("Room Classification", RoomClassificationModule())
-        self.__aimsm.add_model("Image Captioning", ImageCaptioningModule())
+        if not do_not_add_models:
+            self.__aimsm.add_model("Yolo V8", YoloV8Module())
+            self.__aimsm.add_model("Fast SAM", FastSamModule())
+            self.__aimsm.add_model("Room Classification", RoomClassificationModule())
+            self.__aimsm.add_model("Image Captioning", ImageCaptioningModule())
 
-        self.__cssm = CSSM()
-        self.__cssm.add_state("Idle")
-        self.__cssm.add_state("Detector")
-        self.__cssm.add_state("Segmentor")
-        self.__cssm.add_state("All Models")
+        # self.__cssm = CSSM()
+        # self.__cssm.add_state("Idle")
+        # self.__cssm.add_state("Detector")
+        # self.__cssm.add_state("Segmentor")
+        # self.__cssm.add_state("All Models")
 
-        self.__cssm.bind("Detector", ["Yolo V8", "Room Classification"])
-        self.__cssm.bind("Segmentor", ["Fast SAM", "Room Classification"])
-        self.__cssm.bind(
-            "All Models",
-            # ["Yolo V8", "Fast SAM", "Room Classification"],
-            ["Yolo V8", "Fast SAM", "Image Captioning", "Room Classification"],
-        )
+        # self.__cssm.bind("Detector", ["Yolo V8", "Room Classification"])
+        # self.__cssm.bind("Segmentor", ["Fast SAM", "Room Classification"])
+        # self.__cssm.bind(
+        #     "All Models",
+        #     # ["Yolo V8", "Fast SAM", "Room Classification"],
+        #     ["Yolo V8", "Fast SAM", "Image Captioning", "Room Classification"],
+        # )
 
-        self.__cssm.switch("Idle")
+        # self.__cssm.switch("Idle")
 
         self.__log_controller = LogController(CSVDatabaseStrategy(database_path))
         self.__log_controller.open_database()
@@ -160,6 +162,20 @@ class MainController(QObject):
     def is_ai_model_running(self, ai_model_name: str) -> bool:
         return self.__aimsm.is_model_activated(ai_model_name)
 
+    @Slot(str)
+    def process_model(self, name):
+        i_t = perf_counter()
+        self.__results_data[name] = self.__aimsm.process_model(name, self.__input_data)
+        e_t = perf_counter()
+        elapsed = e_t - i_t
+        fps_count = 1 / elapsed if elapsed != 0 else 999
+
+        # if fps_count < 900:
+        self.__resources_state.fps_count = fps_count
+        self.fpsCounterUpdated.emit()
+
+        # self.register_log()
+        # self.__output_data = self.__aimsm.draw_results(self.__input_data, self.__results_data)
 
     @Slot()
     def process_models(self):
@@ -207,23 +223,23 @@ class MainController(QObject):
     def get_model_names(self):
         return self.__aimsm.get_model_names()
 
-    @Slot(result=list)
-    def get_state_names(self):
-        return self.__cssm.get_states()
+    # @Slot(result=list)
+    # def get_state_names(self):
+    #     return self.__cssm.get_states()
 
     @Slot(str)
     def set_state_models(self, state_models):
         self.__aimsm.set_state_models(state_models)
 
-    @Slot(str)
-    def switch_state(self, state_name):
-        self.__cssm.switch(state_name)
-        self.__aimsm.set_state_models(self.__cssm.state_models())
-        self.stateSwitched.emit()
+    # @Slot(str)
+    # def switch_state(self, state_name):
+    #     self.__cssm.switch(state_name)
+    #     self.__aimsm.set_state_models(self.__cssm.state_models())
+    #     self.stateSwitched.emit()
 
-    @Slot(result=str)
-    def get_current_state(self):
-        return self.__cssm.current_state()
+    # @Slot(result=str)
+    # def get_current_state(self):
+    #     return self.__cssm.current_state()
 
     @Slot(str, result=str)
     def get_model_output(self, name) -> str:
@@ -242,13 +258,16 @@ class MainController(QObject):
         return self.__aimsm.get_model_output_type(name)
 
     @Slot()
-    def log_data(self):
+    def log_data(self, fps_count=None):
         rs = self.__resources_state
 
         rs.cpu_usage = psutil.cpu_percent()
         rs.ram_usage = psutil.Process(os.getpid()).memory_info().rss / 1024**3
         rs.gpu_usage = torch.cuda.utilization()
         rs.vram_usage = torch.cuda.memory_allocated() / 1024**3
+
+        if fps_count is not None:
+            rs.fps_count = fps_count
 
         self.__resource_monitor.add_state(rs)
         self.__resources_state = self.__resource_monitor.get_avg_state()
