@@ -296,7 +296,7 @@ if __name__ == "__main__":
     bottom_margin = 0.15 if len(legends) > 0 else 0.08
     plt.subplots_adjust(left=0.1, right=0.99, bottom=bottom_margin, top=0.95)
 
-    base_name = os.path.splitext(os.path.basename("combined.pdf"))[0]
+    base_name = os.path.splitext(os.path.basename("combined_tripled.pdf"))[0]
     plt.savefig(f"{base_name}.pdf", bbox_inches="tight", pad_inches=0.05)
 
     plt.show()
