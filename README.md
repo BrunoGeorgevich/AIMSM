@@ -6,8 +6,6 @@
 
 This work introduces the Artificial Intelligence Models Switching Mechanism (AIMSM), which enhances adaptability in preexisting AI systems by activating and deactivating AI models during runtime. AIMSM optimizes resource consumption by allocating only the necessary models for each situation, making it especially useful in dynamic environments with multiple AI models.
 
-###
-
 ## Installation
 
 ### Install packages
@@ -43,7 +41,6 @@ pip install -r fastsam/requirements.txt
 
 1. Download FastSAM model and place it in `weights` folder
    - [link](https://drive.google.com/file/d/1m1sjY4ihXBU1fZXdQ-Xdj-mDltW-2Rqv/view?usp=sharing)
-
 
 ## Robot@VirtualHome simulation
 
@@ -97,3 +94,76 @@ This will start the PySide2 app and connect to the ROSBridge server.
 conda activate aimsm
 ./run_linux.sh
 ```
+
+## Run Experiments
+
+### Run all models experiment
+
+The following script will execute the "All Models" experiment and save the results in `labs/all_models_experiment.csv`.
+
+```bash
+cd experiments
+python all_models_experiment.py
+```
+
+### Run single model experiment without AIMSM
+
+The following script will execute the "Single Model - without AIMSM" experiment and save the results in `labs/single_model_without_AIMSM.csv`.
+
+```bash
+cd experiments
+python single_model_without_AIMSM.py
+```
+
+### Run single model experiment with AIMSM
+
+The following script will execute the "Single Model - with AIMSM" experiment and save the results in `labs/single_model_with_AIMSM.csv`.
+
+```bash
+cd experiments
+python single_model_with_AIMSM.py
+```
+
+### Run random switching model experiment
+
+The following script will execute the "Random Switching Models" experiment and save the results in `labs/random_switch_models_experiment.csv`.
+
+```bash
+cd experiments
+python random_switch_models_experiment.py
+```
+
+### Run context switching model experiment
+
+The following script will execute the "Context Switching Models" experiment and save the results in `labs/context_switching_experiment.csv`.
+
+**Note: This experiment requires the Unity simulation to be running.**
+
+```bash
+cd experiments
+python context_switching_experiment.py
+```
+
+## Visualization
+
+### Experiments 1 and 2
+
+The following script will execute the visualization of the experiments "All Models" and "Single Model" (with and without AIMSM).
+
+```bash
+cd labs
+python plot_data_tripled.py
+```
+
+![The results obtained by running the experiments 1 and 2. Figure (a) shows the system's behavior when all models are loaded into the memory and executed for each input data. Figures (b) and (c) show the system's performance when only a single model is executed, without and with the AIMSM.](assets/combined_tripled.png)
+
+### Experiments 3 and 4
+
+The following script will execute the visualization of the experiments "Random Switching Models" and "Context Switching Models".
+
+```bash
+cd labs
+python plot_data_doubled.py
+```
+
+![Results from the experiments 3 and 4. Figure (a) shows the system's behavior when the models are randomly switched. Figure (b) shows the system's performance when the models are switched based on the context.](assets/combined_doubled.png)
